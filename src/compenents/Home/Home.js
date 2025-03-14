@@ -52,7 +52,7 @@ function Home (){
 
                 <div className='flex justify-center relative pt-[40px]'>
                         {/* inner */}
-                      <div className='max-sm:ml-[20px]  sm:w-[50%] md:w-[80%] lg:w-[50%] grid md:grid-cols-2 gap-[12px]'>
+                      <div className='max-sm:ml-[20px] max-sm:w-[50%]  sm:w-[50%] md:w-[60%] lg:w-[50%] grid md:grid-cols-2 gap-[12px]'>
                         {/* cardsdiv1 */}
                           <div className=' shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] px-[30px] rounded-[24px]'>
                               {/* innercardsdiv1 */}
