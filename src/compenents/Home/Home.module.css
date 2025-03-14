@@ -1,0 +1,68 @@
+.motionbg{
+    width: 100% !important;
+    height: 140px;
+
+}
+.motionbginner {
+    width: 100% !important;
+    height: 100%; /* Add this */
+    overflow: hidden;
+}
+.bettercards{
+    position: relative;
+  background: white;
+  border-radius: 24px; /* Add border radius */
+  overflow: hidden;
+  border: 1px solid white;
+  /* border-right: ; */
+  height: 450px;
+  padding-top: 50px !important;
+}
+
+.bettercards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px; /* Match the container's border radius */
+    background: linear-gradient(to right, #2FF86D, rgba(0, 0, 0, 0)); /* Gradient */
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Masking */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* For Safari */
+    mask-composite: exclude; /* Exclude the inner part */
+    -webkit-mask-composite: xor; /* For Safari */
+    padding: 2px; /* Border thickness */
+    pointer-events: none; /* Ensure clicks pass through */
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    padding-left: 2.3px;
+}
+
+@media screen  and ( min-width: 768px){
+    .textfive{
+        padding-bottom: 0;
+        margin-left: 20px;
+    }
+}
+
+@media screen  and ( max-width: 480px){
+    .abouttxt{
+       width: 380px;
+    }
+    
+}
+
+@media screen  and ( max-width: 400px){
+    .transformdiv{
+    width: 80% !important;
+    }
+    .transformdiv div div {
+       display: block;
+    }
+    .abouttxt{
+        width: 300px;
+     }
+     
+    
+}

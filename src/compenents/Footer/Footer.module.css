@@ -1,0 +1,35 @@
+@media screen  and (max-width:558px){
+    .ftcontainer{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+
+    .company{
+        width: 420px;
+    }
+    .bottom{
+        display: block;
+    }
+}
+
+@media screen  and (max-width:430px){
+    
+
+    .company{
+        width: 300px;
+    }
+    .bottom{
+        display: block;
+    }
+}
+
+@media screen  and (max-width:330px){
+    
+
+    .company{
+        width: 200px;
+    }
+    .bottom{
+        display: block;
+    }
+}
