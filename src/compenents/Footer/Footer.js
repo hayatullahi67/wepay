@@ -14,7 +14,7 @@ const Footer = () => {
         <div className='w-[90%]'>
 
         
-        <div className={`grid  gap-y-[20px] max-sm:grid-cols-2 sm:grid-cols-2 md:gap-y-[20px] lg:grid-cols-4 gap-x-[50px] ${classes.ftcontainer}`}>
+        <div className={`grid  gap-y-[20px] max-sm:grid-cols-1 sm:grid-cols-2 md:gap-y-[20px] lg:grid-cols-4 gap-x-[50px] ${classes.ftcontainer}`}>
           {/* Company Info */}
           <div className={` w-[263px] lg:w-[363px] ${classes.company}`}>
             <div className="mb-4">

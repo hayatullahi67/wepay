@@ -155,7 +155,7 @@ function Home (){
                      </div>
                       {/* better cards container  */}
                       <div className='max-sm:flex max-sm:justify-center'>
-                      <div className=' max-sm:w-[70%] max-sm:gap-y-[20px] grid lg:grid-cols-3 md:grid-cols-2 md:gap-y-[20px]'>
+                      <div className=' max-sm:w-[100%] max-sm:gap-y-[20px] grid lg:grid-cols-3 md:grid-cols-2 md:gap-y-[20px]'>
 
 {/* card 1 */}
 <div className={` w-[300px]  flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
@@ -311,11 +311,13 @@ function Home (){
                       {/* grids 1 */}
                       <div className={`flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px] border border-gray bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className='flex gap-[20px] items-center w-[358px]'>
+                       <div className=' max-sm:p-[30px] sm:flex gap-[20px] items-center w-[358px]'>
                         {/* image */}
-                        <div className='max-sm:max-w-[20%]'>
-                          <img src={Individual} className=' sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
-
+                        <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
+                           <div className='mx-auto'>
+                          <img src={Individual} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                            
+                           </div>
                         </div>
 
                         {/* text */}
@@ -332,11 +334,15 @@ function Home (){
                      {/* grids 2 */}
                      <div className={`flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px] border border-gray bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className='flex gap-[20px] items-center w-[358px]'>
+                       <div className='max-sm:p-[30px] sm:flex gap-[20px] items-center w-[358px]'>
                         {/* image */}
-                        <div className='max-sm:max-w-[20%]'>
-                          <img src={carbon} className='sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                        
 
+                        <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
+                           <div className='mx-auto'>
+                          <img src={carbon} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                            
+                           </div>
                         </div>
 
                         {/* text */}
@@ -354,7 +360,7 @@ function Home (){
                       {/* grids 3 */}
                       <div className={`flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px] border border-gray bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className='flex gap-[20px] items-center w-[358px]'>
+                       <div className='max-sm:p-[30px] sm:flex gap-[20px] items-center w-[358px]'>
                         {/* image */}
                         <div className='max-sm:max-w-[20%]'>
                           <img src={Market} className='sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
@@ -377,7 +383,7 @@ function Home (){
 
                       <div className={`flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px] border border-gray bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className='flex gap-[20px] items-center w-[358px]'>
+                       <div className='max-sm:p-[30px] sm:flex gap-[20px] items-center w-[358px]'>
                         {/* image */}
                         <div className='max-sm:max-w-[20%]'>
                           <img src={financial} className='sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
