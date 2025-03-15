@@ -43,9 +43,11 @@
 import { useState } from "react"
 // Using a placeholder image since the actual image path is not available
 import Group4 from '../../assets/images/Group4.png'
+import { useTheme } from "../Themeprovider/Themeprovider"
 
 
 function Header() {
+  const { isDarkMode } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -54,7 +56,7 @@ function Header() {
 
   return (
     <div>
-      <header className="max-md:hidden w-[100%] relative flex justify-center pt-[35px] item-center bg-white">
+      <header className={`max-md:hidden w-[100%] relative flex justify-center pt-[35px] item-center  pb-[20px] ${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
         <div className="  w-[90%] flex justify-between items-center">
           {/* Logo */}
           <div className="logo">
@@ -62,7 +64,7 @@ function Header() {
           </div>
           {/* List */}
 
-          <div className="font-[inter] text-opacity-70  text-[#003429] text-[16px] grid grid-cols-5 gap-[15px]">
+          <div className={`font-[inter] text-opacity-70  text-[#003429]  ${isDarkMode ? "text-white" : "text-[#003429]"} text-[16px] grid grid-cols-5 gap-[15px]`}>
             <div>Home</div>
             <div>Personal</div>
             <div>Business</div>
@@ -79,7 +81,7 @@ function Header() {
       </header>
 
       {/* Mobile Header - This will only show on mobile screens */}
-      <header className="w-full bg-white pt-4 pb-4 px-4 md:hidden">
+      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4 px-4 md:hidden`}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="logo">
