@@ -15,89 +15,49 @@ import pos from '../../assets/images/pos.png'
 import Ellipse from '../../assets/images/Ellipse.png'
 import Ellipse11 from '../../assets/images/Ellipse11.png'
 import classes from './Home.module.css'
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { useTheme } from "../Themeprovider/Themeprovider"
 import { useEffect , useState ,useRef } from 'react'
+import CountUp from 'react-countup'
+// import ScrollTrigger from 'react-scroll-trigger'
+import ScrollTrigger from "gsap/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 function Home (){
   const { isDarkMode } = useTheme();
+  
+  // const [count1, setCount1] = useState(0);
+  // const [count2, setCount2] = useState(0);
+  // const [count3, setCount3] = useState(0);
+  // const counterRef = useRef(null);
+  // const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef(null);
+  const [startCount, setStartCount] = useState(false);
+
   useEffect(() => {
     if (window.AOS) {
       window.AOS.init({
-        duration: 1000, // Animation duration (1s)
-        once: false, // Ensures animation happens every time you scroll
-        mirror: true, // Repeats animation when scrolling up
+        duration: 1000,
+        once: false,
+        mirror: true,
       });
     }
   }, []);
 
-
-  // const [counts, setCounts] = useState({
-  //   population: 0,
-  //   countries: 0,
-  //   customers: 0,
-  // })
-
-  // useEffect(() => {
-  //   // Target values
-  //   const targets = {
-  //     population: 360,
-  //     countries: 10,
-  //     customers: 500,
-  //   }
-
-  //   // Animation duration in milliseconds
-  //   const duration = 2000
-
-  //   // Start time
-  //   const startTime = Date.now()
-
-  //   // Animation interval
-  //   const interval = setInterval(() => {
-  //     const elapsedTime = Date.now() - startTime
-  //     const progress = Math.min(elapsedTime / duration, 1)
-
-  //     setCounts({
-  //       population: Math.floor(progress * targets.population),
-  //       countries: Math.floor(progress * targets.countries),
-  //       customers: Math.floor(progress * targets.customers),
-  //     })
-
-  //     // Stop the animation when complete
-  //     if (progress === 1) {
-  //       clearInterval(interval)
-  //     }
-  //   }, 16) // ~60fps
-
-  //   // Clean up interval
-  //   return () => clearInterval(interval)
-  // }, [])
-  
-  
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [count3, setCount3] = useState(0);
-
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    const trigger = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top 80%", // Starts animation when 80% of the section is visible
+      onEnter: () => setStartCount(true),
+      onLeaveBack: () => setStartCount(false), // Optional: reset when scrolling back up
+    });
 
-    const animateCount = (setCount, end, duration) => {
-      let startTime;
-      const step = (timestamp) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / duration, 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    };
-
-    animateCount(setCount1, 360, 2000);
-    animateCount(setCount2, 10, 1500);
-    animateCount(setCount3, 10, 1800);
+    return () => trigger.kill(); // Cleanup ScrollTrigger when component unmounts
   }, []);
+  
     return(
-        <div className={`${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
+        <div className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
          <div className={classes.homeinner}>
         {/* banking  */}
         <section className='relative pt-[54px]'>
@@ -188,7 +148,7 @@ function Home (){
         </section>
 
            {/* motion numbers  div */}
-        <section className=' w-[100%]'>
+        <section ref={sectionRef} className=' w-[100%]'>
              {/* bg img */}
              <div className={`  pt-[30px] ${classes.motionbg} `}>
                 <div className={`absolute   ${classes.motionbginner} `}>
@@ -200,23 +160,25 @@ function Home (){
             <div className='relative mt-[-40px] w-[100%] flex justify-center '> 
                 <div className='w-[90%] bg-[#043024] flex rounded-[32px]  py-[16px] px-[20px] sm:px-[40px]'>
 
-
+                
                    <div className='sm:pl-[30px] grid sm:gap-y-[20px] grid-cols-2 sm:grid-cols-2 md:grid-cols-4  items-center sm:w-[90%]'>
                     {/* 360 */}
                     <div>
-                        <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b >{count1}</b><b>M+</b></div>
+                    
+                        <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'>
+                          <b>  {startCount &&  <CountUp start={0} end={360} duration={6} delay={0} />} M+</b></div> 
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> {isDarkMode ? <span>People Wey No Get Bank Account</span> : <span>Underserved Population</span>} </p>
                     </div>
 
                    {/* 10+  */}
-                    <div className='pl-[30px]'>
-                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{count2}</b><b>+</b></div>
+                    <div  className='pl-[30px]'>
+                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{startCount && <CountUp start={0} end={10} duration={6} delay={0} />} </b><b>+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> 10 African Countries</p>
                     </div>
 
                        {/* 500 */}
                     <div className={`md:pb-[20px] lg:pb-[0px]  ${classes.textfive}`}>
-                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{count3}</b><b>M+</b></div>
+                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b> {startCount &&   <CountUp start={0} end={500} duration={6} delay={0} />}</b><b>M+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}>Potential Customers</p>
                     </div>
 
@@ -224,6 +186,7 @@ function Home (){
                      <a> <img src={googleplay} /> </a>  
                     </div>
                    </div>
+                   
                 </div>
 
             </div>
@@ -246,7 +209,7 @@ function Home (){
                       <div className=' max-sm:w-[100%] max-sm:gap-y-[20px] grid lg:grid-cols-3 sm:grid-cols-2 md:gap-y-[20px]'>
 
 {/* card 1 */}
-<div data-aos="fade-down" className={` w-[300px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
+<div data-aos="fade-down" className={` w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
  <div className='w-[220px]'>
 
     {/* card img */}
@@ -269,8 +232,8 @@ function Home (){
               
           </div>
            {/* card 2 */}
-           <div  data-aos="fade-down"className={` w-[300px] flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
-           <div className='w-[245px]'>
+           <div  data-aos="fade-down"className={` w-[260px] flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
+           <div className='w-[215px]'>
           
               {/* card img */}
                <div className='flex justify-center pb-[30px]'> 
@@ -328,10 +291,10 @@ function Home (){
 
          <section className={`bg-[#DEFFF4] sm:h-[550px] mt-[65px] w-[100%] ${isDarkMode ? "bg-[#042F1A]" : "bg-[#00EA48]"}`} >
           <div className='flex justify-center'>
-            <div data-aos="fade-down" className='w-[90%]  sm:flex items-center md:gap-[135px] lg:gap-[235px] '>
+            <div data-aos="fade-down" className='w-[90%]  sm:flex items-center md:gap-[135px] justify-between '>
                 <div className='max-sm:hidden'>
                   
-                  <img src={Link} className='max-sm:w-[200px] sm:w-[200px] md:w-[200px] lg:w-[300px]' />
+                  <img src={Link} className='max-sm:w-[200px] sm:w-[200px] md:w-[200px] lg:w-[400px]' />
                 </div> 
 
                   {/* steps */}
@@ -414,13 +377,13 @@ function Home (){
                    {/* grid template container */}
                    <div className='mt-[40px] grid sm:grid-cols-2 gap-y-[20px]'>
                       {/* grids 1 */}
-                      <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto'>
-                          <img src={Individual} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                           <div className='mx-auto '>
+                          <img src={Individual} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
                         </div>
@@ -438,15 +401,15 @@ function Home (){
                       </div>
 
                      {/* grids 2 */}
-                     <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                     <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                         
 
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
                            <div className='mx-auto'>
-                          <img src={carbon} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                          <img src={carbon} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
                         </div>
@@ -465,14 +428,14 @@ function Home (){
 
 
                       {/* grids 3 */}
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                        
                        <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
                            <div className='mx-auto'>
-                          <img src={Market} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                          <img src={Market} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
                         </div>
@@ -492,15 +455,15 @@ function Home (){
 
                       {/* grids 4 */}
 
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                        
 
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
                            <div className='mx-auto '>
-                          <img src={financial} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
+                          <img src={financial} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
                         </div>
@@ -533,9 +496,9 @@ function Home (){
                   <div className='flex justify-center'>
                       <div className='w-[90%] '>
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
-                      <div data-aos="fade-down" className="lg:pl-[80px] gap-x-[0px] lg:flex lg:gap-[30px] md:grid md:grid-cols-2 max-md:gap-y-[20px]">
+                      <div data-aos="fade-down" className=" gap-x-[0px] lg:flex lg:gap-[30px] md:grid md:grid-cols-2 max-md:gap-y-[20px]">
                       {/* bordercard */}
-                      <div className="relative  md:max-w-[320px] lg:max-w-[450px]">
+                      <div className="relative  md:max-w-[320px] lg:max-w-[530px]">
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -600,7 +563,7 @@ function Home (){
       </div>
     </div>                        
                              {/*second border card  */}
-                             <div className="relative md:max-w-[320px] lg:max-w-[450px]">
+                             <div className="relative md:max-w-[320px] lg:max-w-[530px]">
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -679,7 +642,7 @@ function Home (){
             <div className='flex justify-center'>
 
               <div className='max-w-[90%]'>
-                 <div className='sm:flex justify-between mr-[50px] pt-[42px] pb-[50px] items-center '>
+                 <div className='sm:flex justify-between lg:gap-[120px]  pt-[42px] pb-[50px] items-center '>
                   {/* flex1 */}
                     <div data-aos="fade-left" >
                        <div>
@@ -707,7 +670,7 @@ function Home (){
                      </div>
                     </div> */}
                     <div className="relative">
-  {/* Background Image */}
+  
   <img src={pos} className="z-10 left-[40px] relative w-[2500px] h-[450px]" alt="Background" />
 
   {/* Outer Circle */}
@@ -831,7 +794,9 @@ function Home (){
            </section>
       </div>
         </div>
+       
     )
 }
 
 export default Home
+
