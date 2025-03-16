@@ -13,6 +13,7 @@ import Market from '../../assets/images/Market.png'
 import financial from '../../assets/images/financial.png'
 import pos from '../../assets/images/pos.png'
 import Ellipse from '../../assets/images/Ellipse.png'
+import Ellipse11 from '../../assets/images/Ellipse11.png'
 import classes from './Home.module.css'
 import { useTheme } from "../Themeprovider/Themeprovider"
 import { useEffect , useState ,useRef } from 'react'
@@ -86,11 +87,11 @@ function Home (){
                 <div  className='  flex justify-center relative'>
                     <div>
                     <div className='   text-center'>
-                    <h1 className={`font-[inter] text-[20px] sm:text-[35px] md:text-[65px] text-[#055140] ${isDarkMode ? "text-white" : "text-[#003429]"} `}><b>Banking Beyond Boundaries</b></h1>
+                    <h1 className={`font-[inter] text-[20px] sm:text-[35px] md:text-[65px] text-[#055140] ${isDarkMode ? "text-white" : "text-[#003429]"} `}><b> {isDarkMode ? <span>Banking Wey No Get Boundary</span> : <span> Banking Beyond Boundaries</span> } </b></h1>
                    
                    <p 
                    className={`lg:w-[900px] font-[inter] text-[#055140] text-[17px] sm:text-[22px] md:text-[27px] ${isDarkMode ? "text-white" : "text-[#003429]"}`}> 
-                   WePay leverages advanced biometric technology, and cutting-edge encryption to deliver financial freedom across Africa.</p>
+                    {isDarkMode ? <span>WePay dey use better biometric technology, plus strong encryption to bring financial freedom come everywhere for Africa.</span> : <span>WePay leverages advanced biometric technology, and cutting-edge encryption to deliver financial freedom across Africa.</span> }</p>
 
                     </div>
 
@@ -120,12 +121,13 @@ function Home (){
                                 </div>
                                 {/* cardsheader */}
                                   <div className='text-center pb-[27px] w-[100%] '>
-                                    <h1 className={`text-[#055140]  text-[15.5px] sm:text-[19.5px] md:text-[22.5px] ${isDarkMode ? "text-white" : "text-[#003429]"}`}> <b> Your money at your fingertips </b></h1>
+                                    <h1 className={`text-[#055140]  text-[15.5px] sm:text-[19.5px] md:text-[22.5px] ${isDarkMode ? "text-white" : "text-[#003429]"}`}> <b> {isDarkMode ? <span>Your Money Dey Your Hand</span> : <span>Your money at your fingertips</span> }  </b></h1>
                                   </div>
 
                                   {/* cardstext */}
                                   <div className={`sm:text-center text-[#055140] text-opacity-70 text-[20px] ${isDarkMode ? "text-white" : "text-[#003429]"} `}>
-                                  Experience secure, seamless banking. Send money, pay bills, and make purchases instantly.
+                                    {isDarkMode ? <span>Enjoy banking wey dey secure and smooth. Send money, pay bills, and buy things sharp-sharp.</span> : <span> Experience secure, seamless banking. Send money, pay bills, and make purchases instantly. </span> }
+                                  
                                   </div>
                               </div>
                           </div>
@@ -140,12 +142,17 @@ function Home (){
                                 </div>
                                 {/* cardsheader */}
                                   <div className='text-center pb-[27px] w-[100%]'>
-                                    <h1 className={`text-[#055140] text-[15.5px] sm:text-[19.5px] md:text-[22.5px] w-[100%] ${isDarkMode ? "text-white" : "text-[#003429]"}`}> <b> What if losing your phone meant nothing? </b></h1>
+                                    <h1 className={`text-[#055140] text-[15.5px] sm:text-[19.5px] md:text-[22.5px] w-[100%] ${isDarkMode ? "text-white md:text-[19.7px]" : "text-[#003429]"}`}> <b>
+                                      {isDarkMode ? <span>what If losing Your Phone No Mean Anything?</span> : <span>What if losing your phone meant nothing?</span>}
+                                       
+                                       
+                                        </b></h1>
                                   </div>
 
                                   {/* cardstext */}
                                   <div className={`text-center text-[#055140] text-opacity-70 text-[20px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>
-                                  Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries.
+                                   {isDarkMode ? <span>Imagine world where your fingerprint na your wallet, and money matter no get boundary again.</span> : <span> Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries. </span>}
+                                  
                                   </div>
                               </div>
                           </div>
@@ -174,19 +181,19 @@ function Home (){
                     {/* 360 */}
                     <div>
                         <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b >{counts.population.toLocaleString()}</b><b>M+</b></div>
-                        <p className='font-[inter] text-white text-[14px]'>Underserved Population</p>
+                        <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> {isDarkMode ? <span>People Wey No Get Bank Account</span> : <span>Underserved Population</span>} </p>
                     </div>
 
                    {/* 10+  */}
                     <div className='pl-[30px]'>
                         <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{counts.countries}</b><b>+</b></div>
-                        <p className='font-[inter] text-white text-[14px]'>10 African Countries</p>
+                        <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> 10 African Countries</p>
                     </div>
 
                        {/* 500 */}
                     <div className={`md:pb-[20px] lg:pb-[0px]  ${classes.textfive}`}>
                         <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{counts.countries}</b><b>M+</b></div>
-                        <p className='font-[inter] text-white text-[14px]'>Potential Customers</p>
+                        <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}>Potential Customers</p>
                     </div>
 
                     <div className='sm:pl-[20px] md:pl-[60px] '>
@@ -206,7 +213,7 @@ function Home (){
                 <div className='w-[90%]'>
                      <div className='text-center mb-[40px]'>
                        <b>
-                        <h1 className={`text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>Why We’re Better</h1>
+                        <h1 className={`text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}> {isDarkMode ? <span>Why We Better Pass </span> : <span>Why We’re Better</span>} </h1>
                          
                        </b>
                      </div>
@@ -228,7 +235,10 @@ function Home (){
      </div>
 
      <div className={`font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]  ${isDarkMode ? "text-[white] text-opacity-70 " : "text-[#003429]"}`}>
-        <p>Your fingerprint is your only key, protected by advanced encryption.</p>
+       
+        <p>
+           {isDarkMode ? <span>Your fingerprint na your only key, and we lock am with strong encryption.</span> : <span> Your fingerprint is your only key, protected by advanced encryption.</span>}
+          </p>
      </div>
  </div>
           
@@ -248,7 +258,9 @@ function Home (){
                </div>
           
                <div className={`${isDarkMode ? "text-[white] text-opacity-70" : "text-[#003429]"} w-[235px] font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]`}>
-                  <p>No cards, no phones—access your money anytime, anywhere.
+                  <p>
+                    {isDarkMode ? <span>No card, no phone—touch and make payment anytime, anywhere.</span> : <span>No cards, no phones  access your money anytime, anywhere.</span>}
+                    
                   </p>
                </div>
            </div>
@@ -270,7 +282,8 @@ function Home (){
         
              <div className={`${isDarkMode ? "text-[white]" : "text-[#003429]"} font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]`}>
                 <p>
-                 <span className='text-[#00EA48]'>Making money is hard, withdrawing it shouldn't be.</span> WePay offers transparent, low-cost transaction fees, making banking accessible and affordable for everyone.
+                  {isDarkMode ? <span><span className='text-[#00EA48]'>To make money hard, but to commot am no suppose hard.</span>  WePay bring clear, small fees wey make banking easy and cheap for everybody.</span> : <span><span className='text-[#00EA48]'>Making money is hard, withdrawing it shouldn't be.</span> WePay offers transparent, low-cost transaction fees, making banking accessible and affordable for everyone.</span>}
+                 
                 </p>
              </div>
          </div>
@@ -302,7 +315,8 @@ function Home (){
                   <div className=" min-h-screen flex items-center justify-center p-6">
       <div className="max-w-lg">
         <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6`}>
-          Get started with WePay
+          {isDarkMode ? <span> How to take open Wepay Account</span> : <span> Get started with WePay </span> }
+          
           
           
           </h2>
@@ -331,7 +345,7 @@ function Home (){
           </div>
           <div className="ml-4">
             <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-1 text-lg font-semibold text-gray-900 text-lg font-semibold text-gray-900`}>Sign Up with Biometrics</h3>
-            <p className="text-gray-500 text-sm">Your fingerprint is your password</p>
+            <p className="text-gray-500 text-sm">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
           </div>
         </div>
 
@@ -343,8 +357,10 @@ function Home (){
             </div>
           </div>
           <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-lg font-semibold text-gray-900`}>Fund Your Account</h3>
-            <p className="text-gray-500 text-sm">Start secure and seamless banking today</p>
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-lg font-semibold text-gray-900`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
+            <p className="text-gray-500 text-sm">
+              {isDarkMode ? 'Start secure and smooth banking today.' : 'Start secure and seamless banking today'}
+              </p>
           </div>
         </div>
       </div>
@@ -367,14 +383,14 @@ function Home (){
                    {/* heading */}
                    <div className={` ${isDarkMode ? "text-white" : "text-[#003429]"} text-center flex justify-center text-[#093F2D] font-[inter] sm:text-[32px] md:text-[42px] lg:text-[52px] w-[100%]`}>
                     <h1 className='w-[900px]'>
-                     {isDarkMode ?  <b>Change Your Money Journey
-                      with WePay!</b> : <b>Transform Your Financial Journey with WePay!</b> }  </h1>
+                     {isDarkMode ?  <b>Come Enjoy Better Banking
+                      With Wepay!</b> : <b>Transform Your Financial Journey with WePay!</b> }  </h1>
                    </div>
 
                    {/* grid template container */}
                    <div className='mt-[40px] grid sm:grid-cols-2 gap-y-[20px]'>
                       {/* grids 1 */}
-                      <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] boreder-[0]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -389,7 +405,8 @@ function Home (){
                         <div className={`${classes.transformtext}`} >
                           <b className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[#093F2D]  font-[inter] text-[16px]`}>For Individuals</b>
                           <p className={`${isDarkMode ? "text-white" : "text-[#003429]"} max-sm:w-[248px] max-lg:w-[208px] text-[#093F2D] font-[inter] text-[15px] text-opacity-70`}>
-                          Simplify payments and withdrawals with just a touch.
+                          {isDarkMode ? 'Make payments and withdrawals easy with just one touch.' : 'Simplify payments and withdrawals with just a touch.'}
+                          
                           </p>
                         </div>
                        </div>
@@ -397,7 +414,7 @@ function Home (){
                       </div>
 
                      {/* grids 2 */}
-                     <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] boreder-[0]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                     <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -414,7 +431,8 @@ function Home (){
                         <div className={`${classes.transformtext}`}>
                           <b className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[#093F2D] font-[inter] text-[16px]`}>For SMEs</b>
                           <p className={`${isDarkMode ? "text-white" : "text-[#003429]"} max-sm:w-[248px] max-lg:w-[208px]  w-[258px] text-[#093F2D] font-[inter] text-[15px] text-opacity-70`}>
-                          Empower your business with affordable POS systems and seamless transactions.
+                            {isDarkMode ? 'Grow your business with cheap POS systems and smooth transactions.' : 'Empower your business with affordable POS systems and seamless transactions.' }
+                          
                           </p>
                         </div>
                        </div>
@@ -423,7 +441,7 @@ function Home (){
 
 
                       {/* grids 3 */}
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] boreder-[0]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -439,7 +457,8 @@ function Home (){
                         <div className={`${classes.transformtext}`}>
                           <b className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[#093F2D] font-[inter] text-[16px]`}>For Marketplaces</b>
                           <p className={`${isDarkMode ? "text-white" : "text-[#003429]"} max-sm:w-[248px] max-lg:w-[208px] w-[258px] text-[#093F2D] font-[inter] text-[15px] text-opacity-70`}>
-                          Deliver fast, secure, touch-based payments to your customers effortlessly.
+                          {isDarkMode ? 'Give fast, secure, touch-based payments without wahala.' : 'Deliver fast, secure, touch-based payments to your customers effortlessly.'}
+                          
 
                           </p>
                         </div>
@@ -449,14 +468,14 @@ function Home (){
 
                       {/* grids 4 */}
 
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] boreder-[0]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
+                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[478px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] items-center  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                        
 
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto'>
+                           <div className='mx-auto '>
                           <img src={financial} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[70px]' />
                             
                            </div>
@@ -466,7 +485,8 @@ function Home (){
                         <div className={`${classes.transformtext}`}>
                           <b className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[#093F2D] font-[inter] text-[16px]`}>For Financial Institutions</b>
                           <p className={`${isDarkMode ? "text-white" : "text-[#003429]"}  max-sm:w-[248px] max-lg:w-[208px] w-[258px] text-[#093F2D] font-[inter] text-[15px] text-opacity-70`}>
-                          Embrace cashless innovation and identity banking with biometric solutions.
+                           {isDarkMode ? 'Join cashless movement and identity banking with biometric solutions.' : 'Embrace cashless innovation and identity banking with biometric solutions.'}
+                          
                           </p>
                         </div>
                        </div>
@@ -487,9 +507,9 @@ function Home (){
 
            <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} w-[100%] bg-[#Defff4] h-fit pb-[50px]`}>
                   <div className='flex justify-center'>
-                      <div className='w-[90%]'>
+                      <div className='w-[90%] '>
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
-                      <div data-aos="fade-down" className="gap-x-[0px] lg:flex lg:gap-[30px] md:grid md:grid-cols-2 max-md:gap-y-[20px]">
+                      <div data-aos="fade-down" className="lg:pl-[80px] gap-x-[0px] lg:flex lg:gap-[30px] md:grid md:grid-cols-2 max-md:gap-y-[20px]">
                       {/* bordercard */}
                       <div className="relative  md:max-w-[320px] lg:max-w-[450px]">
       {/* Outer glow container */}
@@ -510,7 +530,7 @@ function Home (){
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 90%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[115px] bg-[#00ea48] '></div>
+        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48] '></div>
         {/* Bottom border: has bottom but no top, right taller than left */}
         <div
           className="absolute bottom-0 left-0 w-full"
@@ -526,22 +546,24 @@ function Home (){
             // clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0% 100%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute  rounded-full right-[-6px] bottom-[160px]  bg-[#00ea48] '></div>
+        <div className='h-[15px] w-[15px] absolute  rounded-full right-[-6px] bottom-[155px]  bg-[#00ea48] '></div>
 
 
         <div className="space-y-2 relative z-10 bg-[#145f41] rounded-[10px] flex justify-center py-[30px] ">
-          <div className='h-fit w-[85%]'>
+          <div className='min-h-[200px] w-[85%]'>
 
           <h3 className="text-[20px] font-[inter] mb-[15px]  text-white "><b>Real Stories, Real Impact </b> </h3>
 
 <p className="font-[inter] pb-[15px] text-[14px] text-[#dceeff]">
-  WePay's biometric payment solution has been a game-changer for me easy setup, reliable transactions and excellent customer support.Highly recommend
+  {isDarkMode ? 'WePay biometric payment don change everything for us. Easy to set up, transactions dey sure, and their customer support dey top-notch. I recommend am well!' : "WePay's biometric payment solution has been a game-changer for me easy setup, reliable transactions and excellent customer support.Highly recommend"}
+  
 </p>
 
 <div className="flex items-center justify-between gap-3">
   
   <div>
     <p className="text-sm font-medium text-emerald-50">Isaac Samuel</p>
+    <p className='text-sm font-medium text-white text-opacity-70'>Small Business Owner</p>
   </div>
 
   <div className='h-[45px] w-[45px]'>
@@ -573,7 +595,7 @@ function Home (){
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 90%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[115px] bg-[#00ea48] '></div>
+        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48] '></div>
         {/* Bottom border: has bottom but no top, right taller than left */}
         <div
           className="absolute bottom-0 left-0 w-full"
@@ -589,26 +611,28 @@ function Home (){
             // clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0% 100%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute  rounded-full right-[-6px] bottom-[160px]  bg-[#00ea48] '></div>
+        <div className='h-[15px] w-[15px] absolute  rounded-full right-[-6px] bottom-[155px]  bg-[#00ea48] '></div>
 
 
         <div className="space-y-2 relative z-10 bg-[#145f41] rounded-[10px] flex justify-center py-[30px] ">
-          <div className='h-fit w-[85%]'>
+          <div className='min-h-[200px] w-[85%]'>
 
           <h3 className="text-[20px] font-[inter] mb-[15px]  text-white "><b>Real Stories, Real Impact </b> </h3>
 
 <p className="font-[inter] pb-[15px] text-[14px] text-[#dceeff]">
-  WePay's biometric payment solution has been a game-changer for me easy setup, reliable transactions and excellent customer support.Highly recommend
+ {isDarkMode ? 'The smooth sign-up and biometric security don make transactions easier and safer.' : ' The seamless onboarding and biometric security have made transactions easier and safer.'}
+
 </p>
 
-<div className="flex items-center justify-between gap-3">
+<div className=" mt-[30px] flex items-center justify-between gap-3">
   
   <div>
-    <p className="text-sm font-medium text-emerald-50">Isaac Samuel</p>
+    <p className="text-sm font-medium text-emerald-50">Idara Ekong</p>
+    <p className='text-sm font-medium text-white text-opacity-70'>Marketplace Owner</p>
   </div>
 
   <div className='h-[45px] w-[45px]'>
-  <img className='h-[45px] w-[45px]' src={Ellipse} />
+  <img className='h-[45px] w-[45px]' src={Ellipse11} />
   </div>
           </div>
           
@@ -639,7 +663,9 @@ function Home (){
                        </div>
 
                        <div className='sm:w-[268px] max-sm:w-[451px] max-md:w-[311px] md:w-[311px] lg:w-[491px] font-[inter] text-[17px] '>
-                        <p className={` ${isDarkMode ? "text-white" : "text-[#093F2D]"} text-opacity-70 text-[black] ${classes.abouttxt}`}>WePay Mobile Solutions Limited is redefining finance in Africa through biometric authentication. Our robust infrastructure is built on strategic partnerships with leading fintech companies, banks, and local merchants across the continent, creating a network that empowers underbanked populations with secure, inclusive financial services. With WePay, users can conduct financial transactions and access their funds using only their fingerprints, eliminating the need for traditional cards or smartphones. This approach simplifies the payment process and empowers everyone, especially those in underbanked markets to participate confidently in the digital economy. At WePay, we’re taking fintech beyond mere digital banking and into identity banking. We're architects of financial inclusion. We build bridges where traditional banking creates walls.</p>
+                        <p className={` ${isDarkMode ? "text-white" : "text-[#093F2D]"} text-opacity-70 text-[black] ${classes.abouttxt}`}>
+                          {isDarkMode ? 'WePay Mobile Solutions Limited dey redefine money matter for Africa with biometric authentication. We dey partner with big fintech companies, banks, and local agents all over the continent, to build network wey dey empower people wey no get enough access to banking with secure and inclusive financial services. With WePay, you fit do money transactions with only your fingerprint—no need for card or smartphone. This way dey make payment simple and give everybody, especially people wey dey place wey banking no fit reach, power to join digital economy with confidence. For WePay, we no just dey do digital banking, we dey do identity banking. We dey build bridge where normal banking dey put wall.': "WePay Mobile Solutions Limited is redefining finance in Africa through biometric authentication. Our robust infrastructure is built on strategic partnerships with leading fintech companies, banks, and local merchants across the continent, creating a network that empowers underbanked populations with secure, inclusive financial services. With WePay, users can conduct financial transactions and access their funds using only their fingerprints, eliminating the need for traditional cards or smartphones. This approach simplifies the payment process and empowers everyone, especially those in underbanked markets to participate confidently in the digital economy. At WePay, we’re taking fintech beyond mere digital banking and into identity banking. We're architects of financial inclusion. We build bridges where traditional banking creates walls."}
+                          </p>
                        </div>
                       
                     </div>
@@ -684,11 +710,14 @@ function Home (){
            <section className='mt-[80px]'>
            <div className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
       <div className="w-full max-w-3xl px-6 py-8">
-        <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>Get In Touch with Us</h1>
+        <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
+          {isDarkMode ? 'Make We Link Up!' : 'Get In Touch with Us'}
+          
+          </h1>
 
         <p className={`${isDarkMode ? "text-white" : "text-[black]"} text-center mb-8 text-[black] text-[17px] font-[inter] text-opacity-70`}>
-          Want to learn more about how WePay can support your business or personal financial needs? Share your details
-          below, and we&apos;ll arrange a call-back from our team.
+          {isDarkMode ? <span> You wan know more about how WePay fit help your business or personal money needs? Drop your details below, and we go arrange call-back from our team </span>  : <span>Want to learn more about how WePay can support your business or personal financial needs? Share your details
+            below, and we&apos;ll arrange a call-back from our team.</span>}
         </p>
 
         <form  className="space-y-6">
