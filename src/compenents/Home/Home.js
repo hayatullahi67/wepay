@@ -15,6 +15,8 @@ import pos from '../../assets/images/pos.png'
 import Ellipse from '../../assets/images/Ellipse.png'
 import Ellipse11 from '../../assets/images/Ellipse11.png'
 import classes from './Home.module.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useTheme } from "../Themeprovider/Themeprovider"
 import { useEffect , useState ,useRef } from 'react'
 function Home (){
@@ -30,48 +32,70 @@ function Home (){
   }, []);
 
 
-  const [counts, setCounts] = useState({
-    population: 0,
-    countries: 0,
-    customers: 0,
-  })
+  // const [counts, setCounts] = useState({
+  //   population: 0,
+  //   countries: 0,
+  //   customers: 0,
+  // })
+
+  // useEffect(() => {
+  //   // Target values
+  //   const targets = {
+  //     population: 360,
+  //     countries: 10,
+  //     customers: 500,
+  //   }
+
+  //   // Animation duration in milliseconds
+  //   const duration = 2000
+
+  //   // Start time
+  //   const startTime = Date.now()
+
+  //   // Animation interval
+  //   const interval = setInterval(() => {
+  //     const elapsedTime = Date.now() - startTime
+  //     const progress = Math.min(elapsedTime / duration, 1)
+
+  //     setCounts({
+  //       population: Math.floor(progress * targets.population),
+  //       countries: Math.floor(progress * targets.countries),
+  //       customers: Math.floor(progress * targets.customers),
+  //     })
+
+  //     // Stop the animation when complete
+  //     if (progress === 1) {
+  //       clearInterval(interval)
+  //     }
+  //   }, 16) // ~60fps
+
+  //   // Clean up interval
+  //   return () => clearInterval(interval)
+  // }, [])
+  
+  
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+  const [count3, setCount3] = useState(0);
 
   useEffect(() => {
-    // Target values
-    const targets = {
-      population: 360,
-      countries: 10,
-      customers: 500,
-    }
+    AOS.init({ duration: 1000, once: true });
 
-    // Animation duration in milliseconds
-    const duration = 2000
+    const animateCount = (setCount, end, duration) => {
+      let startTime;
+      const step = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        setCount(Math.floor(progress * end));
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
 
-    // Start time
-    const startTime = Date.now()
-
-    // Animation interval
-    const interval = setInterval(() => {
-      const elapsedTime = Date.now() - startTime
-      const progress = Math.min(elapsedTime / duration, 1)
-
-      setCounts({
-        population: Math.floor(progress * targets.population),
-        countries: Math.floor(progress * targets.countries),
-        customers: Math.floor(progress * targets.customers),
-      })
-
-      // Stop the animation when complete
-      if (progress === 1) {
-        clearInterval(interval)
-      }
-    }, 16) // ~60fps
-
-    // Clean up interval
-    return () => clearInterval(interval)
-  }, [])
-  
-  
+    animateCount(setCount1, 360, 2000);
+    animateCount(setCount2, 10, 1500);
+    animateCount(setCount3, 10, 1800);
+  }, []);
     return(
         <div className={`${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
          <div className={classes.homeinner}>
@@ -180,19 +204,19 @@ function Home (){
                    <div className='sm:pl-[30px] grid sm:gap-y-[20px] grid-cols-2 sm:grid-cols-2 md:grid-cols-4  items-center sm:w-[90%]'>
                     {/* 360 */}
                     <div>
-                        <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b >{counts.population.toLocaleString()}</b><b>M+</b></div>
+                        <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b >{count1}</b><b>M+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> {isDarkMode ? <span>People Wey No Get Bank Account</span> : <span>Underserved Population</span>} </p>
                     </div>
 
                    {/* 10+  */}
                     <div className='pl-[30px]'>
-                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{counts.countries}</b><b>+</b></div>
+                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{count2}</b><b>+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> 10 African Countries</p>
                     </div>
 
                        {/* 500 */}
                     <div className={`md:pb-[20px] lg:pb-[0px]  ${classes.textfive}`}>
-                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{counts.countries}</b><b>M+</b></div>
+                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{count3}</b><b>M+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}>Potential Customers</p>
                     </div>
 
