@@ -496,7 +496,7 @@ function Home (){
                   <div className='flex justify-center'>
                       <div className='w-[90%] '>
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
-                      <div data-aos="fade-down" className=" gap-x-[0px] lg:flex lg:gap-[30px] md:grid md:grid-cols-2 max-md:gap-y-[20px]">
+                      <div data-aos="fade-down" className=" max-sm:gap-x-[20px] lg:flex lg:gap-[30px] grid md:grid-cols-2 max-md:gap-y-[20px]">
                       {/* bordercard */}
                       <div className="relative  md:max-w-[320px] lg:max-w-[530px]">
       {/* Outer glow container */}
