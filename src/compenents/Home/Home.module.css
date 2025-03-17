@@ -139,7 +139,11 @@
     .abouttxt{
        width: 380px;
     }
-    
+   .bordercard{
+    width: 350px !important;
+    margin-left: 30px;
+   }
+     
 }
 
 @media screen  and ( max-width: 520px){
@@ -158,5 +162,5 @@
         width: 300px;
      }
      
-    
+     
 }

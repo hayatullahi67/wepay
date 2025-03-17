@@ -559,7 +559,7 @@ function Home (){
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
                       <Slider {...sliderSettings} data-aos="fade-down" className={`${classes.sliderWrapper} slider-custom max-sm:gap-x-[20px] lg:flex lg:gap-[30px] grid md:grid-cols-2 max-md:gap-y-[20px]`}>
                       {/* bordercard */}
-                      <div className=" max-md:max-w-[440px] max-sm:ml-[20px] lg:ml-[20px] slider-item relative  md:max-w-[320px] lg:max-w-[530px]">
+                      <div className={` ${classes.bordercard} max-md:max-w-[440px] max-sm:ml-[20px] lg:ml-[20px] slider-item relative  md:max-w-[320px] lg:max-w-[530px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -624,7 +624,7 @@ function Home (){
       </div>
     </div>                        
                              {/*second border card  */}
-                             <div className="max-md:max-w-[440px]  max-sm:ml-[20px] lg:ml-[20px] slider-item relative md:max-w-[320px] lg:max-w-[530px]">
+                             <div className={`${classes.bordercard}  max-md:max-w-[440px]  max-sm:ml-[20px] lg:ml-[20px] slider-item relative md:max-w-[320px] lg:max-w-[530px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
