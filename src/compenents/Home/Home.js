@@ -53,7 +53,7 @@ function Home (){
       onLeaveBack: () => setStartCount(false), // Optional: reset when scrolling back up
     });
 
-    return () => trigger.kill(); // Cleanup ScrollTrigger when component unmounts
+    // return () => trigger.kill(); // Cleanup ScrollTrigger when component unmounts
   }, []);
   
     return(
