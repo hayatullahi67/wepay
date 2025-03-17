@@ -48,7 +48,7 @@ function Home (){
 
   useEffect(() => {
     const updateSettings = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setSliderSettings({
           dots: true, 
           infinite: true,  
@@ -258,7 +258,7 @@ function Home (){
          <section>
             <div className='mt-[80px] flex justify-center w-[100%]'> 
 
-                <div className='w-[90%]'>
+                <div className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%]'>
                      <div className='text-center mb-[40px]'>
                        <b>
                         <h1 className={`text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}> {isDarkMode ? <span>Why We Better Pass </span> : <span>Why We’re Better</span>} </h1>
@@ -267,7 +267,7 @@ function Home (){
                      </div>
                       {/* better cards container  */}
                       <div className='max-sm:flex max-sm:justify-center'>
-                      <div className=' max-sm:w-[100%] max-sm:gap-y-[20px] grid lg:grid-cols-3 sm:grid-cols-2 md:gap-y-[20px]'>
+                      <div className=' max-sm:w-[100%] max-sm:gap-y-[20px] sm:gap-y-[20px] grid lg:grid-cols-3 sm:grid-cols-2 md:gap-y-[20px]'>
 
 {/* card 1 */}
 <div data-aos="fade-down" className={` w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
@@ -352,7 +352,7 @@ function Home (){
 
          <section className={`bg-[#DEFFF4] sm:h-[550px] mt-[65px] w-[100%] ${isDarkMode ? "bg-[#042F1A]" : "bg-[#00EA48]"}`} >
           <div className='flex justify-center'>
-            <div data-aos="fade-down" className='w-[90%]  sm:flex items-center md:gap-[135px] justify-between '>
+            <div data-aos="fade-down" className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%]  sm:flex items-center md:gap-[135px] justify-between '>
                 <div className='max-sm:hidden'>
                   
                   <img src={Link} className='max-sm:w-[200px] sm:w-[200px] md:w-[200px] lg:w-[400px]' />
@@ -379,7 +379,7 @@ function Home (){
             <div className="w-[2px] h-6 bg-gray-400 "></div>
           </div>
           <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6 text-lg font-semibold text-gray-900`}>Download the app</h3>
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6 text-lg font-semibold text-gray-900 max-sm:text-[16px]`}>Download the app</h3>
           </div>
         </div>
 
@@ -392,8 +392,8 @@ function Home (){
             <div className="w-[2px] h-12 bg-gray-400"></div>
           </div>
           <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-1 text-lg font-semibold text-gray-900 text-lg font-semibold text-gray-900`}>Sign Up with Biometrics</h3>
-            <p className="text-gray-500 text-sm">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-1 text-lg font-semibold text-gray-900 text-lg font-semibold text-gray-900 max-sm:text-[16px]`}>Sign Up with Biometrics</h3>
+            <p className="text-gray-500 text-sm ">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
           </div>
         </div>
 
@@ -405,7 +405,7 @@ function Home (){
             </div>
           </div>
           <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-lg font-semibold text-gray-900`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-lg font-semibold text-gray-900 max-sm:text-[16px]`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
             <p className="text-gray-500 text-sm">
               {isDarkMode ? 'Start secure and smooth banking today.' : 'Start secure and seamless banking today'}
               </p>
@@ -426,7 +426,7 @@ function Home (){
 } pt-[80px] pb-[60px]`}>
            <div className='w-[100%]  flex justify-center'>
 
-            <div className='w-[90%] '>
+            <div className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%] '>
                 <div>
                    {/* heading */}
                    <div className={` ${isDarkMode ? "text-white" : "text-[#003429]"} text-center flex justify-center text-[#093F2D] font-[inter] sm:text-[32px] md:text-[42px] lg:text-[52px] w-[100%]`}>
@@ -436,7 +436,7 @@ function Home (){
                    </div>
 
                    {/* grid template container */}
-                   <div className='mt-[40px] grid sm:grid-cols-2 gap-y-[20px]'>
+                   <div className='mt-[40px] grid sm:grid-cols-2 sm:gap-x-[50px] gap-y-[20px]'>
                       {/* grids 1 */}
                       <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[328px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
@@ -555,11 +555,11 @@ function Home (){
 
            <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} w-[100%] bg-[#Defff4] h-fit pb-[50px]`}>
                   <div className='flex justify-center'>
-                      <div className='w-[92%] '>
-                        <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
-                      <Slider {...sliderSettings} data-aos="fade-down" className={`${classes.sliderWrapper} slider-custom max-sm:gap-x-[20px] lg:flex lg:gap-[30px] grid md:grid-cols-2 max-md:gap-y-[20px]`}>
+                      <div className='max-sm:w-[70%] sm:w-[85%]  lg:w-[92%] '>
+                        <div className='text-center mt-[50px] mb-[30px]'><h1 className={`  ${classes.join}  ${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
+                        <Slider {...sliderSettings} data-aos="fade-down" className={`${classes.sliderWrapper} slider-custom  w-full max-w-[100vw]`}>
                       {/* bordercard */}
-                      <div className={` ${classes.bordercard} max-md:max-w-[440px] max-sm:ml-[20px] lg:ml-[20px] slider-item relative  md:max-w-[320px] lg:max-w-[530px]`}>
+                      <div className={` ${classes.bordercard} max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative   lg:max-w-[530px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -624,7 +624,7 @@ function Home (){
       </div>
     </div>                        
                              {/*second border card  */}
-                             <div className={`${classes.bordercard}  max-md:max-w-[440px]  max-sm:ml-[20px] lg:ml-[20px] slider-item relative md:max-w-[320px] lg:max-w-[530px]`}>
+                             <div className={`${classes.bordercard}  max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative  lg:max-w-[530px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -668,7 +668,7 @@ function Home (){
           <h3 className="text-[20px] font-[inter] mb-[15px]  text-white "><b>Real Stories, Real Impact </b> </h3>
 
 <p className="font-[inter] pb-[15px] text-[14px] text-[#dceeff]">
- {isDarkMode ? 'The smooth sign-up and biometric security don make transactions easier and safer.' : ' The seamless onboarding and biometric security have made transactions easier and safer.'}
+ {isDarkMode ? 'The smooth sign-up and biometric security don make transactions easier and safer.' : ' The seamless onboarding and biometric security have made transactions easier and safer.'}
 
 </p>
 
@@ -688,8 +688,7 @@ function Home (){
         </div>
       </div>
     </div>            
-                      </Slider >
-                      
+                      </Slider >  
                       </div>
 
                   </div>
@@ -702,15 +701,15 @@ function Home (){
            <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"}  bg-[#defff4] w-[100%] mt-[80px]`}>
             <div className='flex justify-center'>
 
-              <div className='max-w-[90%]'>
-                 <div className='sm:flex justify-between lg:gap-[120px]  pt-[42px] pb-[50px] items-center '>
+              <div className='lg:max-w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%] '>
+                 <div className='md:flex justify-between lg:gap-[120px]  pt-[42px] pb-[50px] items-center '>
                   {/* flex1 */}
                     <div data-aos="fade-left" >
                        <div>
                         <h1 className={`${isDarkMode ? "text-white" : "text-[#093F2D]"} font-[inter] text-[#093F2D] text-[24px] sm:text-[34px] md:text-[64px]`}><b>About WePay </b></h1>
                        </div>
 
-                       <div className='sm:w-[268px] max-sm:w-[451px] max-md:w-[311px] md:w-[311px] lg:w-[491px] font-[inter] text-[17px] '>
+                       <div className=' max-sm:w-[451px] max-md:w-[311px] sm:w-[491px] lg:w-[491px] font-[inter] text-[17px] '>
                         <p className={` ${isDarkMode ? "text-white" : "text-[#093F2D]"} text-opacity-70 text-[black] ${classes.abouttxt}`}>
                           {isDarkMode ? 'WePay Mobile Solutions Limited dey redefine money matter for Africa with biometric authentication. We dey partner with big fintech companies, banks, and local agents all over the continent, to build network wey dey empower people wey no get enough access to banking with secure and inclusive financial services. With WePay, you fit do money transactions with only your fingerprint—no need for card or smartphone. This way dey make payment simple and give everybody, especially people wey dey place wey banking no fit reach, power to join digital economy with confidence. For WePay, we no just dey do digital banking, we dey do identity banking. We dey build bridge where normal banking dey put wall.': "WePay Mobile Solutions Limited is redefining finance in Africa through biometric authentication. Our robust infrastructure is built on strategic partnerships with leading fintech companies, banks, and local merchants across the continent, creating a network that empowers underbanked populations with secure, inclusive financial services. With WePay, users can conduct financial transactions and access their funds using only their fingerprints, eliminating the need for traditional cards or smartphones. This approach simplifies the payment process and empowers everyone, especially those in underbanked markets to participate confidently in the digital economy. At WePay, we’re taking fintech beyond mere digital banking and into identity banking. We're architects of financial inclusion. We build bridges where traditional banking creates walls."}
                           </p>
@@ -732,13 +731,13 @@ function Home (){
                     </div> */}
                     <div className="relative">
   
-  <img src={pos} className="z-10 left-[40px] relative w-[2500px] h-[450px]" alt="Background" />
+  <img src={pos} className="z-10 left-[40px] relative  w-[2500px] h-[450px]" alt="Background" />
 
   {/* Outer Circle */}
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[302px] h-[302px] border-4 border-green-500 rounded-full flex justify-center items-center">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-sm:w-[260px] max-sm:h-[260px] w-[302px] h-[302px] border-4 border-green-500 rounded-full flex justify-center items-center">
     
     {/* Middle Circle */}
-    <div className="w-[212px] h-[212px] border-4 border-green-500 rounded-full flex justify-center items-center">
+    <div className="max-sm:w-[190px] max-sm:h-[190px] w-[212px] h-[212px] border-4 border-green-500 rounded-full flex justify-center items-center">
       
       {/* Inner Circle with Image */}
       <div className=" w-[122px] h-[122px] border-4 border-green-500 rounded-full overflow-hidden">
@@ -757,7 +756,7 @@ function Home (){
            {/* Get in touch */}
            <section className='mt-[80px]'>
            <div className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
-      <div className="w-full max-w-3xl px-6 py-8">
+      <div className="w-full max-w-3xl px-6 py-8 ">
         <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
           {isDarkMode ? 'Make We Link Up!' : 'Get In Touch with Us'}
           
