@@ -23,9 +23,55 @@ import CountUp from 'react-countup'
 // import ScrollTrigger from 'react-scroll-trigger'
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 gsap.registerPlugin(ScrollTrigger);
 function Home (){
   const { isDarkMode } = useTheme();
+
+  
+
+  const [sliderSettings, setSliderSettings] = useState({
+    
+    arrows: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+   
+    appendDots: (dots) => <ul className={classes.slickDots}>{dots}</ul>,
+  });
+
+
+  useEffect(() => {
+    const updateSettings = () => {
+      if (window.innerWidth >= 768) {
+        setSliderSettings({
+          dots: true, 
+          infinite: true,  
+          slidesToShow: 2,  
+          slidesToScroll: 1,  
+        });
+      } else {
+        setSliderSettings({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        });
+      }
+    };
+
+    updateSettings(); // Initial check
+    window.addEventListener("resize", updateSettings);
+
+    return () => window.removeEventListener("resize", updateSettings);
+  }, []);
+
   
   // const [count1, setCount1] = useState(0);
   // const [count2, setCount2] = useState(0);
@@ -40,7 +86,7 @@ function Home (){
       window.AOS.init({
         duration: 1000,
         once: false,
-        mirror: true,
+        // mirror: true,
       });
     }
   }, []);
@@ -72,7 +118,7 @@ function Home (){
   }, []);
 
     return(
-        <div className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
+        <div className={`${classes.homecontainer}  ${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
          <div className={classes.homeinner}>
         {/* banking  */}
         <section className='relative pt-[54px]'>
@@ -509,11 +555,11 @@ function Home (){
 
            <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} w-[100%] bg-[#Defff4] h-fit pb-[50px]`}>
                   <div className='flex justify-center'>
-                      <div className='w-[90%] '>
+                      <div className='w-[92%] '>
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
-                      <div data-aos="fade-down" className=" max-sm:gap-x-[20px] lg:flex lg:gap-[30px] grid md:grid-cols-2 max-md:gap-y-[20px]">
+                      <Slider {...sliderSettings} data-aos="fade-down" className={`${classes.sliderWrapper} slider-custom max-sm:gap-x-[20px] lg:flex lg:gap-[30px] grid md:grid-cols-2 max-md:gap-y-[20px]`}>
                       {/* bordercard */}
-                      <div className="relative  md:max-w-[320px] lg:max-w-[530px]">
+                      <div className=" max-md:max-w-[440px] max-sm:ml-[20px] lg:ml-[20px] slider-item relative  md:max-w-[320px] lg:max-w-[530px]">
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -578,7 +624,7 @@ function Home (){
       </div>
     </div>                        
                              {/*second border card  */}
-                             <div className="relative md:max-w-[320px] lg:max-w-[530px]">
+                             <div className="max-md:max-w-[440px]  max-sm:ml-[20px] lg:ml-[20px] slider-item relative md:max-w-[320px] lg:max-w-[530px]">
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -642,7 +688,7 @@ function Home (){
         </div>
       </div>
     </div>            
-                      </div>
+                      </Slider >
                       
                       </div>
 

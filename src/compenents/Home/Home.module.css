@@ -1,3 +1,90 @@
+.homecontainer{
+    width: 100%;
+}
+.homeinner{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+/* Wrapper for the slider */
+.sliderWrapper {
+    width: 100%;
+    position: relative;
+    /* padding: 20px; */
+  }
+  
+  /* Custom Styling for Slick Dots */
+  :global(.slick-dots) {
+    bottom: -30px !important;
+    text-align: center;
+  }
+  
+  :global(.slick-dots li) {
+    margin: 0 5px;
+  }
+  
+  :global(.slick-dots li button:before) {
+    font-size: 12px;
+    color: gray;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  :global(.slick-dots li.slick-active button:before) {
+    color: #145f41 !important;
+    opacity: 1;
+    font-size: 16px;
+  }
+  
+  /* Custom Arrows */
+  :global(.slick-prev),
+  :global(.slick-next) {
+    width: 25px !important;
+    height: 25px !important;
+    z-index: 0;
+    display: none !important;
+  }
+  .slickPrev {
+    transform: scaleX(-1); /* Flips the arrow */
+    background-color: green !important;
+       
+}
+
+  :global(.slick-prev) {
+    left: -50px !important;
+    /* background-color: green !important; */
+ color: #145f41 !important;
+ /* display: none !important; */
+  }
+  .slickPrev,
+  .slickNext {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  :global(.slick-next) {
+    right: -50px !important;
+ /* display: none !important; */
+
+  }
+  
+  .slick-prev,
+.slick-next {
+ 
+}
+
+
+
 .motionbg{
     width: 100% !important;
     height: 140px;

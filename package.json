@@ -8,13 +8,17 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "arrows": "^0.0.3",
     "gsap": "^3.12.7",
     "lucide-react": "^0.479.0",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
     "react-scroll-trigger": "^0.6.14",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
