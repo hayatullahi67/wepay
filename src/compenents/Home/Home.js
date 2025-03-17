@@ -34,7 +34,7 @@ function Home (){
   // const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
   const [startCount, setStartCount] = useState(false);
-
+  const hasAnimated = useRef(false);
   useEffect(() => {
     if (window.AOS) {
       window.AOS.init({
@@ -45,17 +45,32 @@ function Home (){
     }
   }, []);
 
+  // useEffect(() => {
+  //   const trigger = ScrollTrigger.create({
+  //     trigger: sectionRef.current,
+  //     start: "top 80%", // Starts animation when 80% of the section is visible
+  //     onEnter: () => setStartCount(true),
+  //     onLeaveBack: () => setStartCount(false), // Optional: reset when scrolling back up
+  //   });
+
+  //   // return () => trigger.kill(); // Cleanup ScrollTrigger when component unmounts
+  // }, []);
+  
   useEffect(() => {
     const trigger = ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 80%", // Starts animation when 80% of the section is visible
-      onEnter: () => setStartCount(true),
-      onLeaveBack: () => setStartCount(false), // Optional: reset when scrolling back up
+      start: "top 80%", // Starts when 80% of the section is visible
+      onEnter: () => {
+        if (!hasAnimated.current) {
+          setStartCount(true);
+          hasAnimated.current = true; // ✅ Prevents re-triggering
+        }
+      },
     });
 
-    // return () => trigger.kill(); // Cleanup ScrollTrigger when component unmounts
+    return () => trigger.kill(); // Cleanup on unmount
   }, []);
-  
+
     return(
         <div className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"}`}>
          <div className={classes.homeinner}>

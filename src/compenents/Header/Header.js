@@ -81,7 +81,7 @@ function Header() {
       </header>
 
       {/* Mobile Header - This will only show on mobile screens */}
-      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4 px-4 md:hidden`}>
+      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4  md:hidden`}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="logo">
