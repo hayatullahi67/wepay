@@ -216,6 +216,11 @@
  .join{
   font-size: 20px;
  }
+ .transformgrid{
+  display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
   .transformtext b{
      font-size: 13px;
   } 
@@ -310,12 +315,13 @@
     width: 80% !important;
     }
     .transformgrid{
-        display: block;
+        display: inline-block;
           padding-top: 20px;
           padding-bottom: 20px;
     }
     .transformtext{
         padding-left: 10px;
+        text-align: center;
     }
     .abouttxt{
         width: 300px;
