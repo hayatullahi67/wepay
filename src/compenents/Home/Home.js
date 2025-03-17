@@ -166,13 +166,13 @@ function Home (){
                     <div>
                     
                         <div className=' text-[20px] sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'>
-                          <b>  {startCount &&  <CountUp start={0} end={360} duration={6} delay={0} />} M+</b></div> 
+                          <b>  {startCount &&  <CountUp start={0} end={360} duration={6} delay={0} />}M+</b></div> 
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> {isDarkMode ? <span>People Wey No Get Bank Account</span> : <span>Underserved Population</span>} </p>
                     </div>
 
                    {/* 10+  */}
                     <div  className='pl-[30px]'>
-                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{startCount && <CountUp start={0} end={10} duration={6} delay={0} />} </b><b>+</b></div>
+                        <div className='sm:text-[30px] lg:text-[55px] font-[inter] text-[#2ff86d]'><b>{startCount && <CountUp start={0} end={10} duration={6} delay={0} />}</b><b>+</b></div>
                         <p className={`font-[inter] text-white text-[14px] ${isDarkMode ? 'text-[11.6px]' : 'text-[14px]'}`}> 10 African Countries</p>
                     </div>
 
