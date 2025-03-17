@@ -195,7 +195,7 @@ function Home (){
                                   </div>
 
                                   {/* cardstext */}
-                                  <div className={`text-center text-[#055140] text-opacity-70 text-[20px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>
+                                  <div className={`sm:text-center text-[#055140] text-opacity-70 text-[20px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>
                                    {isDarkMode ? <span>Imagine world where your fingerprint na your wallet, and money matter no get boundary again.</span> : <span> Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries. </span>}
                                   
                                   </div>
