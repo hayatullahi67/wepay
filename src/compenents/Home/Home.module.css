@@ -243,7 +243,7 @@
    }
    .transformdiv{
     max-width: 320px !important;
-    text-align: center;
+    /* text-align: center; */
     padding-left: 20px !important;
     padding-right: 20px !important;
    }
@@ -321,7 +321,7 @@
     }
     .transformtext{
         padding-left: 10px;
-        text-align: center;
+        /* text-align: center; */
     }
     .abouttxt{
         width: 300px;
