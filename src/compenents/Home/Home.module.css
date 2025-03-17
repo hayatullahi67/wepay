@@ -315,9 +315,12 @@
     width: 80% !important;
     }
     .transformgrid{
-        display: inline-block;
+        display: inline-block !important;
           padding-top: 20px;
           padding-bottom: 20px;
+    }
+    .transformgrid img {
+          width: 300px;
     }
     .transformtext{
         padding-left: 10px;
