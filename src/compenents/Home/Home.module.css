@@ -151,11 +151,44 @@
        width: 380px;
     }
    .bordercard{
-    width: 290px !important;
+    width: 320px !important;
     margin-left: 30px;
    }
      
 }
+
+@media screen  and ( max-width: 400px){
+  
+   .bordercard{
+    width: 290px !important;
+    margin-left: 30px;
+   }
+     
+   .leftcircle{
+    bottom: 190px;
+}
+.leftcircle2{
+    bottom: 160px;
+}
+
+}
+
+
+@media screen  and ( max-width: 330px){
+  
+    .bordercard{
+     width: 260px !important;
+     margin-left: 30px;
+    }
+      
+    .leftcircle{
+     bottom: 190px;
+ }
+ .leftcircle2{
+     bottom: 180px;
+ }
+ 
+ }
 
 @media screen  and ( max-width: 520px){
     .transformdiv{

@@ -578,7 +578,7 @@ function Home (){
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 90%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48] '></div>
+        <div className={`${classes.leftcircle} h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48]`}></div>
         {/* Bottom border: has bottom but no top, right taller than left */}
         <div
           className="absolute bottom-0 left-0 w-full"
@@ -643,7 +643,7 @@ function Home (){
             clipPath: "polygon(0 0, 100% 0, 100% 50%, 0 90%)",
           }}
         />
-        <div className='h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48] '></div>
+        <div className={`${classes.leftcircle2} h-[15px] w-[15px] absolute left-[-6px] rounded-full bottom-[130px] bg-[#00ea48]`}></div>
         {/* Bottom border: has bottom but no top, right taller than left */}
         <div
           className="absolute bottom-0 left-0 w-full"
