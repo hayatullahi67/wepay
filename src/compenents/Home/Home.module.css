@@ -146,6 +146,17 @@
      
 }
 
+@media screen  and ( max-width: 400px){
+    .abouttxt{
+       width: 380px;
+    }
+   .bordercard{
+    width: 250px !important;
+    margin-left: 30px;
+   }
+     
+}
+
 @media screen  and ( max-width: 520px){
     .transformdiv{
     width: 80% !important;
