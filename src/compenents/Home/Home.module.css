@@ -316,11 +316,11 @@
     }
     .transformgrid{
         display: inline-block !important;
-          padding-top: 20px;
+          padding-top: 10px;
           padding-bottom: 20px;
     }
     .transformgrid img {
-          width: 120px;
+          width: 80px;
     }
     .transformtext{
         padding-left: 10px;
