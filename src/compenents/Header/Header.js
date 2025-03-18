@@ -43,6 +43,7 @@
 import { useState } from "react"
 // Using a placeholder image since the actual image path is not available
 import Group4 from '../../assets/images/Group4.png'
+import logo2 from '../../assets/images/logo2.png'
 import { useTheme } from "../Themeprovider/Themeprovider"
 
 
@@ -60,7 +61,7 @@ function Header() {
         <div className="  w-[90%] flex justify-between items-center">
           {/* Logo */}
           <div className="logo">
-            <img src={Group4} className="w-[150px] h-[58px]" />
+            <img src={isDarkMode ? logo2 : Group4 } className="w-[130px] h-[58px]" />
           </div>
           {/* List */}
 
@@ -81,28 +82,28 @@ function Header() {
       </header>
 
       {/* Mobile Header - This will only show on mobile screens */}
-      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4  md:hidden`}>
-        <div className="flex justify-between items-center">
+      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4   md:hidden`}>
+        <div className="flex justify-between items-center ">
           {/* Logo */}
           <div className="logo">
-            <img src={Group4} className="w-[150px] h-[58px]" />
+            <img src={isDarkMode ? logo2 : Group4 } className="w-[150px] h-[58px]" />
           </div>
 
           {/* Hamburger Menu Button */}
           <button onClick={toggleMenu} className="flex flex-col justify-center items-center w-10 h-10">
             <span
-              className={`block w-6 h-0.5 bg-[#003429] mb-1.5 transition-transform ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-[#003429]'}  mb-1.5 transition-transform ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
             ></span>
-            <span className={`block w-6 h-0.5 bg-[#003429] mb-1.5 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
+            <span className={`block w-6 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-[#003429]'}   mb-1.5 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}></span>
             <span
-              className={`block w-6 h-0.5 bg-[#003429] transition-transform ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-[#003429]'}   transition-transform ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             ></span>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="mt-4 bg-white">
+          <div className="mt-4 bg-white px-6">
             <nav className="flex flex-col space-y-4 font-[inter] text-[#003429] text-[16px]">
               <div className="py-2 border-b border-gray-100">Home</div>
               <div className="py-2 border-b border-gray-100">Personal</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Group4 from '../../assets/images/Group4.png'
+import logo2 from '../../assets/images/logo2.png'
 import instagram from '../../assets/images/instagram.png'
 import facebook from '../../assets/images/facebook.png'
 import twitter from '../../assets/images/twitter.png'
@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className={` w-[263px] lg:w-[363px] ${classes.company}`}>
             <div className="mb-4">
-              <img src={Group4} />
+              <img src={logo2} />
             </div>
             <div className="  text-[13px] lg:w-[353px]">
               <p className="font-semibold"><b> Head Office:</b></p>
