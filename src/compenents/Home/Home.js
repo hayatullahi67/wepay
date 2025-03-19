@@ -153,11 +153,11 @@ function Home (){
                 
                 {/* cards */}
 
-                <div className='flex justify-center relative pt-[40px]'>
+                <div className='flex sm:justify-center relative pt-[40px]'>
                         {/* inner */}
-                      <div data-aos="fade-down" className='max-sm:ml-[20px] max-sm:w-[70%]   sm:w-[50%] md:w-[80%] lg:w-[50%] grid-cols-1 grid md:grid-cols-2 gap-[12px]'>
+                      <div data-aos="fade-down" className='max-sm:ml-[20px] max-sm:w-[90%]   max-md:w-[80%]  md:w-[80%] lg:w-[50%]  grid grid-cols-2 gap-[12px]'>
                         {/* cardsdiv1 */}
-                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
+                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
                               {/* innercardsdiv1 */}
                               <div>
                                 {/* cardsdivimg */}
@@ -170,7 +170,7 @@ function Home (){
                                   </div>
 
                                   {/* cardstext */}
-                                  <div className={`sm:text-center text-[#055140] text-opacity-70 text-[20px] ${isDarkMode ? "text-white" : "text-[#003429]"} `}>
+                                  <div className={`${classes.cardtext} max-sm:text-[15px]  sm:text-center text-[#055140] text-opacity-70 text-[20px] ${isDarkMode ? "text-white" : "text-[#003429]"} `}>
                                     {isDarkMode ? <span>Enjoy banking wey dey secure and smooth. Send money, pay bills, and buy things sharp-sharp.</span> : <span> Experience secure, seamless banking. Send money, pay bills, and make purchases instantly. </span> }
                                   
                                   </div>
@@ -178,7 +178,7 @@ function Home (){
                           </div>
                          
                            {/* cardsdiv2 */}
-                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
+                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
                               {/* innercardsdiv2 */}
                               <div>
                                 {/* cardsdivimg */}
@@ -195,7 +195,7 @@ function Home (){
                                   </div>
 
                                   {/* cardstext */}
-                                  <div className={`sm:text-center text-[#055140] text-opacity-70 text-[20px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>
+                                  <div className={`${classes.cardtext} sm:text-center text-[#055140] text-opacity-70 max-sm:text-[15px] text-[20px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}>
                                    {isDarkMode ? <span>Imagine world where your fingerprint na your wallet, and money matter no get boundary again.</span> : <span> Imagine a world where your fingerprint replaces your wallet, and financial access transcends boundaries. </span>}
                                   
                                   </div>
@@ -258,7 +258,7 @@ function Home (){
          <section>
             <div className='mt-[80px] flex justify-center w-[100%]'> 
 
-                <div className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%]'>
+                <div className='lg:w-[90%] max-sm:w-[90%]   sm:w-[85%] md:w-[85%]'>
                      <div className='text-center mb-[40px]'>
                        <b>
                         <h1 className={`text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}> {isDarkMode ? <span>Why We Better Pass </span> : <span>Why We’re Better</span>} </h1>
@@ -267,11 +267,11 @@ function Home (){
                      </div>
                       {/* better cards container  */}
                       <div className='max-sm:flex max-sm:justify-center'>
-                      <div data-aos="fade-down" className=' max-sm:w-[100%] max-sm:gap-y-[20px] sm:gap-y-[20px] grid lg:grid-cols-3 sm:grid-cols-2 md:gap-y-[20px]'>
+                      <div data-aos="fade-down" className=' max-sm:w-[100%] w-[90%] max-sm:gap-y-[20px] sm:gap-y-[20px] grid lg:grid-cols-3 max-sm:grid-cols-2 sm:grid-cols-2 md:gap-y-[20px]'>
 
 {/* card 1 */}
-<div  className={` w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
- <div className='w-[220px]'>
+<div  className={` max-sm:w-[210px] md:w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
+ <div className={`  w-[190px]`}>
 
     {/* card img */}
      <div className='flex justify-center pb-[30px]'> 
@@ -282,7 +282,7 @@ function Home (){
          <h1 className={`font-[inter] text-[22px] text-[#043024] ${isDarkMode ? "text-[white]" : "text-[#003429]"} `}><b> Biometric Security </b></h1>
      </div>
 
-     <div className={`font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]  ${isDarkMode ? "text-[white] text-opacity-70 " : "text-[#003429]"}`}>
+     <div className={`font-[inter] text-[#043024] max-sm:text-[14px] text-[17px] text-opacity-70 mb-[100px]  ${isDarkMode ? "text-[white] text-opacity-70 " : "text-[#003429]"}`}>
        
         <p>
            {isDarkMode ? <span>Your fingerprint na your only key, and we lock am with strong encryption.</span> : <span> Your fingerprint is your only key, protected by advanced encryption.</span>}
@@ -293,8 +293,8 @@ function Home (){
               
           </div>
            {/* card 2 */}
-           <div  className={` w-[260px] flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
-           <div className='w-[215px]'>
+           <div  className={` max-sm:w-[210px] md:w-[260px] flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
+           <div className={`${classes.bettercardsinner2} w-[180px]`}>
           
               {/* card img */}
                <div className='flex justify-center pb-[30px]'> 
@@ -305,7 +305,7 @@ function Home (){
                    <h1 className={`${isDarkMode ? "text-[white]" : "text-[#003429]"} font-[inter] text-[22px] text-[#043024]`}><b> Effortless Convenience </b></h1>
                </div>
           
-               <div className={`${isDarkMode ? "text-[white] text-opacity-70" : "text-[#003429]"} w-[235px] font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]`}>
+               <div className={`${isDarkMode ? "text-[white] text-opacity-70" : "text-[#003429]"} max-sm:w-[195px] w-[235px] font-[inter] text-[#043024] max-sm:text-[14px] text-[17px] text-opacity-70 mb-[100px]`}>
                   <p>
                     {isDarkMode ? <span>No card, no phone—touch and make payment anytime, anywhere.</span> : <span>No cards, no phones  access your money anytime, anywhere.</span>}
                     
@@ -316,7 +316,7 @@ function Home (){
     
           </div>
          {/* card3 */}
-         <div  className={` w-[300px] flex justify-center px-[0px] pt-[20px] pb-[1px]  ${classes.bettercards}`}>
+         <div  className={`max-sm:w-[260px] w-[300px] flex justify-center px-[0px] pt-[20px] pb-[1px]  ${classes.bettercards}`}>
          <div className='w-[245px]'>
         
             {/* card img */}
@@ -328,7 +328,7 @@ function Home (){
                  <h1 className={`${isDarkMode ? "text-[white]" : "text-[#003429]"} font-[inter] text-[22px] text-[#043024]`}><b> Affordable Banking Solutions </b></h1>
              </div>
         
-             <div className={`${isDarkMode ? "text-[white]" : "text-[#003429]"} font-[inter] text-[#043024] text-[17px] text-opacity-70 mb-[100px]`}>
+             <div className={`${isDarkMode ? "text-[white]" : "text-[#003429]"} font-[inter] text-[#043024] max-sm:text-[14px] text-[17px] text-opacity-70 mb-[100px]`}>
                 <p>
                   {isDarkMode ? <span><span className='text-[#00EA48]'>To make money hard, but to commot am no suppose hard.</span>  WePay bring clear, small fees wey make banking easy and cheap for everybody.</span> : <span><span className='text-[#00EA48]'>Making money is hard, withdrawing it shouldn't be.</span> WePay offers transparent, low-cost transaction fees, making banking accessible and affordable for everyone.</span>}
                  
@@ -352,8 +352,8 @@ function Home (){
 
          <section className={`bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-[#042F1A]" : "bg-[#00EA48]"}`} >
           <div data-aos="fade-down" className='flex justify-center'>
-            <div  className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%]  sm:flex items-center md:gap-[135px] justify-between '>
-                <div className='max-sm:hidden'>
+            <div  className='lg:w-[90%] max-sm:w-[70%] max-sm:w-[95%]  sm:w-[85%] md:w-[85%]  flex items-center md:gap-[135px] justify-between '>
+              <div className={`${classes.getimg}`}>
                   
                   <img src={Link} className='max-sm:w-[200px] sm:w-[200px] md:w-[200px] lg:w-[400px]' />
                 </div> 
@@ -426,7 +426,7 @@ function Home (){
 } ${classes.transformsec} pt-[80px] pb-[60px]`}>
            <div className='w-[100%]  flex justify-center'>
 
-            <div className='lg:w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%] '>
+            <div className='lg:w-[90%] max-sm:w-[95%]   sm:w-[85%] md:w-[85%] '>
                 <div>
                    {/* heading */}
                    <div className={` ${isDarkMode ? "text-white" : "text-[#003429]"} text-center flex justify-center text-[#093F2D] font-[inter] sm:text-[32px] md:text-[42px] lg:text-[52px] w-[100%]`}>
@@ -436,9 +436,9 @@ function Home (){
                    </div>
 
                    {/* grid template container */}
-                   <div className='mt-[40px] grid sm:grid-cols-2   gap-y-[20px]'>
+                   <div className='mt-[40px] grid grid-cols-2   gap-y-[20px]'>
                       {/* grids 1 */}
-                      <div data-aos="fade-down" className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      <div  className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -462,7 +462,7 @@ function Home (){
                       </div>
 
                      {/* grids 2 */}
-                     <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                     <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -489,7 +489,7 @@ function Home (){
 
 
                       {/* grids 3 */}
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -516,7 +516,7 @@ function Home (){
 
                       {/* grids 4 */}
 
-                      <div data-aos="fade-down" className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
+                      <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -704,7 +704,7 @@ function Home (){
               <div className='lg:max-w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%] '>
                  <div className={`md:flex justify-between lg:gap-[120px]  pt-[42px] pb-[50px] items-center ${classes.aboutwepay}`}>
                   {/* flex1 */}
-                    <div data-aos="fade-left" className={`${classes.aboutfadeleft}`} >
+                    <div  className={`${classes.aboutfadeleft}`} >
                        <div>
                         <h1 className={`${isDarkMode ? "text-white" : "text-[#093F2D]"} font-[inter] text-[#093F2D] text-[24px] sm:text-[34px] md:text-[64px]`}><b>About WePay </b></h1>
                        </div>
