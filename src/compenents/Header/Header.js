@@ -82,7 +82,9 @@ function Header() {
       </header>
 
       {/* Mobile Header - This will only show on mobile screens */}
-      <header className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4 pb-4   md:hidden`}>
+      <header 
+       style={{ backgroundColor: isDarkMode ? "#00261E" : "white" }}
+      className={` ${isDarkMode ? "bg-[#00261E]" : "bg-white"} w-full bg-white pt-4   md:hidden`}>
         <div className="flex justify-between items-center ">
           {/* Logo */}
           <div className="logo">
@@ -90,7 +92,7 @@ function Header() {
           </div>
 
           {/* Hamburger Menu Button */}
-          <button onClick={toggleMenu} className="flex flex-col justify-center items-center w-10 h-10">
+          <button onClick={toggleMenu} className="flex flex-col justify-center items-center w-10 h-10 ">
             <span
               className={`block w-6 h-0.5 ${isDarkMode ? 'bg-white' : 'bg-[#003429]'}  mb-1.5 transition-transform ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
             ></span>
@@ -103,7 +105,7 @@ function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="mt-4 bg-white px-6">
+          <div className="mt-4 bg-white px-6 py-6">
             <nav className="flex flex-col space-y-4 font-[inter] text-[#003429] text-[16px]">
               <div className="py-2 border-b border-gray-100">Home</div>
               <div className="py-2 border-b border-gray-100">Personal</div>

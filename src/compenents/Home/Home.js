@@ -157,7 +157,9 @@ function Home (){
                         {/* inner */}
                       <div data-aos="fade-down" className='max-sm:ml-[20px] max-sm:w-[90%]   max-md:w-[80%]  md:w-[80%] lg:w-[50%]  grid grid-cols-2 gap-[12px]'>
                         {/* cardsdiv1 */}
-                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
+                          <div
+                         style={isDarkMode ? { backgroundColor: "#00261E", borderColor: "#0F7760" } : {}}
+                          className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
                               {/* innercardsdiv1 */}
                               <div>
                                 {/* cardsdivimg */}
@@ -178,7 +180,9 @@ function Home (){
                           </div>
                          
                            {/* cardsdiv2 */}
-                          <div  className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
+                          <div  
+                          style={isDarkMode ? { backgroundColor: "#00261E", borderColor: "#0F7760" } : {}}
+                          className={`shadow-[0px_2px_4px_rgba(0,0,0,0.24)] bg-white py-[30px] max-sm:px-[10px] px-[30px] rounded-[24px] ${isDarkMode ? "bg-[#00261E] border border-[#0F7760] " : "bg-white"}`}>
                               {/* innercardsdiv2 */}
                               <div>
                                 {/* cardsdivimg */}
@@ -350,8 +354,8 @@ function Home (){
 
          {/* Get started */}
 
-         <section className={`bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-[#042F1A]" : "bg-[#00EA48]"}`} >
-          <div data-aos="fade-down" className='flex justify-center'>
+         <section className={`bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-green-900" : "bg-green"}`} >
+          <div  className='flex justify-center'>
             <div  className='lg:w-[90%] max-sm:w-[70%] max-sm:w-[95%]  sm:w-[85%] md:w-[85%]  flex items-center md:gap-[135px] justify-between '>
               <div className={`${classes.getimg}`}>
                   
@@ -438,12 +442,14 @@ function Home (){
                    {/* grid template container */}
                    <div className='mt-[40px] grid grid-cols-2   gap-y-[20px]'>
                       {/* grids 1 */}
-                      <div  className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      <div 
+                      style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
+                      className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto '>
+                           <div className='max-sm:w-[30%]'>
                           <img src={Individual} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
@@ -462,14 +468,16 @@ function Home (){
                       </div>
 
                      {/* grids 2 */}
-                     <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                     <div 
+                      style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
+                     className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                         
 
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto'>
+                           <div className='max-sm:w-[30%]'>
                           <img src={carbon} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
@@ -489,13 +497,15 @@ function Home (){
 
 
                       {/* grids 3 */}
-                      <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      <div 
+                      style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
+                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                        
                        <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto'>
+                           <div className='max-sm:w-[30%]'>
                           <img src={Market} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
@@ -516,14 +526,16 @@ function Home (){
 
                       {/* grids 4 */}
 
-                      <div  className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
+                      <div 
+                      style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
+                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
                        
 
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
-                           <div className='mx-auto '>
+                           <div className='max-sm:w-[30%]'>
                           <img src={financial} className=' max-sm:max-h-[50px] sm:ml-[10px] sm:w-[60px]  lg:w-[80px] lg:h-[50px]' />
                             
                            </div>
@@ -553,7 +565,9 @@ function Home (){
 
 
 
-           <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} w-[100%] bg-[#Defff4] h-fit pb-[50px]`}>
+           <section
+           style={{ backgroundColor: isDarkMode ? "#042F1A" : "#DEFFF4" }}
+           className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} w-[100%] bg-[#Defff4] h-fit pb-[50px]`}>
                   <div className='flex justify-center'>
                       <div className='max-sm:w-[70%] sm:w-[85%]  lg:w-[92%] '>
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`  ${classes.join}  ${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
@@ -698,7 +712,9 @@ function Home (){
 
 
            {/* About WePay */}
-           <section className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"}  bg-[#defff4] w-[100%] mt-[80px]`}>
+           <section
+            style={{ backgroundColor: isDarkMode ? "#042F1A" : "#DEFFF4" }}
+           className={`${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"}  bg-[#defff4] w-[100%] mt-[80px]`}>
             <div className='flex justify-center'>
 
               <div className='lg:max-w-[90%] max-sm:w-[70%]   sm:w-[85%] md:w-[85%] '>
@@ -755,7 +771,9 @@ function Home (){
 
            {/* Get in touch */}
            <section className='mt-[80px]'>
-           <div className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
+           <div 
+           style={{ backgroundColor: isDarkMode ? "#042F1A" : "#DEFFF4" }}
+           className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
       <div className="w-full max-w-3xl px-6 py-8 ">
         <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
           {isDarkMode ? 'Make We Link Up!' : 'Get In Touch with Us'}

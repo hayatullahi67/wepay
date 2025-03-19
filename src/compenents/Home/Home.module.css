@@ -422,7 +422,9 @@
       padding: 0px;
       /* justify-content:; */
     }
-   
+   .transformtext p{
+    width: 150px;
+   }
 }
 
 
@@ -517,6 +519,12 @@
     max-width: 165px !important;
     /* padding: 0px; */
     /* justify-content:; */
+  }
+  .transformtext p{
+    width: 140px;
+  }
+  .transformdiv div:first-child div {
+    width: 70%;
   }
   .getimg{
     display: none;
@@ -637,7 +645,7 @@
   }
     
     .transformgrid{
-        display: grid !important;
+        display: block !important;
           padding-top:12px;
           /* padding-bottom: 20px; */
           row-gap: 0px;
@@ -647,6 +655,11 @@
           width: 80px;
           /* margin-bottom: 30px; */
     }
+
+    .transformgrid div:first-child {
+      /* width: 80px; */
+      margin-bottom: 10px;
+}
     .transformtext{
         padding-left: 10px;
         /* text-align: center; */
