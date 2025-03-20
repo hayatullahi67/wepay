@@ -1,3 +1,8 @@
+
+.transformgradient{
+  background: white;  /* Solid white background */
+  background: radial-gradient( #c7f1d4 25% , #dbeee1 50%, #f3f8f5 55%, rgb(231, 225, 225));
+}
 .homecontainer{
     width: 100%;
 }
@@ -10,7 +15,9 @@
 .homecontainer.zoomed {
   transform: scale(1.5); /* Increases the size of the whole body by 50% */
 }
-
+.transformdiv {
+  border: 1px solid #0F7760;
+}
 
 /* Wrapper for the slider */
 .sliderWrapper {

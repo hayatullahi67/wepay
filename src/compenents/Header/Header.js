@@ -74,8 +74,8 @@ function Header() {
           </div>
           {/* Register */}
           <div>
-            <div className="w-[119px] h-[59px] rounded-[80px] bg-[#2FF86D] flex justify-center items-center">
-              <div className="font-[inter] text-[#000000] text-[16px]">Register</div>
+            <div className="py-[15px] px-[33px] rounded-[80px] bg-[#2FF86D] flex justify-center items-center">
+              <div className="font-[inter] text-[#000000] text-[17px] font-bold">Register</div>
             </div>
           </div>
         </div>

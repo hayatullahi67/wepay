@@ -6,6 +6,7 @@ import twitter from '../../assets/images/twitter.png'
 import linkedin from '../../assets/images/linkedin.png'
 import WhatsApp from '../../assets/images/whatsapp.png'
 import classes from './Footer.module.css'
+import { FaInstagram, FaFacebook, FaXTwitter, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -68,18 +69,20 @@ const Footer = () => {
             <div className="flex space-x-2 mt-4">
               <a href="#" className="">
                 <img src={instagram} alt="Instagram" className='w-[32px] h-[32px]' />
+                {/* <FaInstagram className='w-[32px] h-[32px] rounded-full flex items-center justify-center text-white text-2xl bg-gradient-to-br from-[#fdf497] via-[#fd5949] to-[#d6249f]' /> */}
               </a>
               <a href="#" className="">
-                <img src={facebook} alt="Facebook" className='w-[32px] h-[32px]' />
+             
+                <img src={facebook} alt="Facebook" className='w-[32px] h-[32px] brightness-125' />
               </a>
               <a href="#" className="">
-                <img src={twitter} alt="Twitter" className='w-[32px] h-[32px]' />
+                <img src={twitter} alt="Twitter" className='w-[32px] h-[32px] brightness-200' />
               </a>
               <a href="#" className="">
-                <img src={linkedin} alt="LinkedIn" className='w-[32px] h-[32px]' />
+                <img src={linkedin} alt="LinkedIn" className='w-[32px] h-[32px] brightness-100' />
               </a>
               <a href="#" className="">
-                <img src={WhatsApp} alt="WhatsApp" className='w-[32px] h-[32px]' />
+                <img src={WhatsApp} alt="WhatsApp" className='w-[32px] h-[32px] brightness-125 ' />
               </a>
             </div>
           </div>
@@ -107,7 +110,7 @@ const Footer = () => {
                 Terms of Use
               </a>
             </div>
-            <div className="text-[#6B8580] text-[14px] font-[inter]">© 2023 WePay Mobile Solutions Limited. All rights reserved.</div>
+            <div className="text-[#6B8580] text-[14px] font-[inter]">© 2025 WePay Mobile Solutions Limited. All rights reserved.</div>
           </div>
         </div>
               </div>
