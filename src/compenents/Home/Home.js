@@ -129,7 +129,7 @@ function Home (){
                   <img src={Group40} className='w-[400px]' />
                </div>
                {/* banking text */}
-                <div  className='  flex justify-center relative'>
+                <div  className={`flex justify-center relative ${classes.bankingtext}`}>
                     <div>
                     <div className='   text-center'>
                     <h1 className={`font-[inter] text-[20px] sm:text-[35px] md:text-[65px] text-[#055140] ${isDarkMode ? "text-white" : "text-[#003429]"} `}><b> {isDarkMode ? <span>Banking Wey No Get Boundary</span> : <span> Banking Beyond Boundaries</span> } </b></h1>
@@ -155,7 +155,7 @@ function Home (){
 
                 <div className='flex sm:justify-center relative pt-[40px]'>
                         {/* inner */}
-                      <div data-aos="fade-down" className='max-sm:ml-[20px] max-sm:w-[90%]   max-md:w-[80%]  md:w-[80%] lg:w-[50%]  grid grid-cols-2 gap-[12px]'>
+                      <div data-aos="fade-down" className={`max-sm:ml-[20px] max-sm:w-[90%]   max-md:w-[80%]  md:w-[80%] lg:w-[50%]  grid grid-cols-2 gap-[12px] ${classes.bankingcards}`}>
                         {/* cardsdiv1 */}
                           <div
                          style={isDarkMode ? { backgroundColor: "#00261E", borderColor: "#0F7760" } : {}}
@@ -265,13 +265,13 @@ function Home (){
                 <div className='lg:w-[90%] max-sm:w-[90%]   sm:w-[85%] md:w-[85%]'>
                      <div className='text-center mb-[40px]'>
                        <b>
-                        <h1 className={`text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}> {isDarkMode ? <span>Why We Better Pass </span> : <span>Why We’re Better</span>} </h1>
+                        <h1 className={` ${classes.betterh1} text-[#043024] font-[inter] text-[34px]  sm:text-[44px]  ${isDarkMode ? "text-white" : "text-[#003429]"}`}> {isDarkMode ? <span>Why We Better Pass </span> : <span>Why We’re Better</span>} </h1>
                          
                        </b>
                      </div>
                       {/* better cards container  */}
-                      <div className='max-sm:flex max-sm:justify-center'>
-                      <div data-aos="fade-down" className=' max-sm:w-[100%] w-[90%] max-sm:gap-y-[20px] sm:gap-y-[20px] grid lg:grid-cols-3 max-sm:grid-cols-2 sm:grid-cols-2 md:gap-y-[20px]'>
+                      <div className={`max-sm:flex max-sm:justify-center `}>
+                      <div data-aos="fade-down" className={`max-sm:w-[100%] w-[90%] max-sm:gap-y-[20px] sm:gap-y-[20px] grid lg:grid-cols-3 max-sm:grid-cols-2 sm:grid-cols-2 md:gap-y-[20px] ${classes.bettecardscontainer} `}>
 
 {/* card 1 */}
 <div  className={` max-sm:w-[210px] md:w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
@@ -363,7 +363,7 @@ function Home (){
                 </div> 
 
                   {/* steps */}
-                  <div className={`lg:mr-[0px]'`}>
+                  <div className={`lg:mr-[0px] `}>
                   <div className="  flex items-center justify-center p-6">
       <div className="max-w-lg">
         <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[45px]  font-bold font-[inter] mb-[60px]`}>
@@ -382,7 +382,7 @@ function Home (){
             <div className="w-[2px] h-[25px] bg-green-400 "></div>
             <div className="w-[2px] h-[25px] bg-gray-400 "></div>
           </div>
-          <div className="ml-[60px]">
+          <div className={`ml-[60px] ${classes.stepdiv}`}>
             <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px] font-[inter]    mb-6   max-sm:text-[16px]`}>Download the app</h3>
           </div>
         </div>
@@ -395,7 +395,7 @@ function Home (){
             </div>
             <div className="w-[2px] h-[60px] bg-gray-400"></div>
           </div>
-          <div className="ml-[60px]">
+          <div className={`ml-[60px] ${classes.stepdiv}`}>
             <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px]  font-[inter]  mb-1 text-lg     max-sm:text-[16px]`}>Sign Up with Biometrics</h3>
             <p className="text-gray-500 text-sm ">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
           </div>
@@ -408,7 +408,7 @@ function Home (){
               3
             </div>
           </div>
-          <div className="ml-[60px]">
+          <div className={`ml-[60px] ${classes.stepdiv}`}>
             <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px] font-[inter] max-sm:text-[16px]`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
             <p className="text-gray-500 text-sm">
               {isDarkMode ? 'Start secure and smooth banking today.' : 'Start secure and seamless banking today'}

@@ -345,7 +345,18 @@
     width: fit-content;
     font-size: 13px;
 }
-  
+.bankingtext p{
+  font-size: 13px;
+}
+.bankingcards h1{
+  font-size: 14px;
+}
+.bankingcards img{
+  width: 80px;
+}
+  .cardtext{
+    font-size: 13px;
+  }
 }
 @media screen  and ( max-width: 1024px){
   .bordercard{
@@ -415,18 +426,32 @@
     
     
   }
+  .getimg{
+    display: none;
+  }
+  .stepdiv{
+    margin-left: 20px;
+  }
+  
   .transformsec{
     height: auto; /* Adjust height automatically */
     min-height: 200px;
     display: flex;
     flex-wrap: wrap;
   }
-  .transformsec div:first-child {
-    /* flex: 1 1 calc(50% - 15px); */
-  }
+ .betterh1{
+  font-size: 25px;
+ }
     .abouttxt{
-       width: 380px;
+       width: 400px;
+       font-size: 13px;
     }
+    .getintouch h1{
+     font-size: 20px;
+    }
+    .getintouch p{
+      font-size: 15px;
+     }
    .bordercard{
     max-width: 280px !important;
     margin-left: 30px;
@@ -451,7 +476,22 @@
     }
    .transformtext p{
     width: 150px;
+    font-size: 11px;
    }
+   .transformtext b{
+    
+    font-size: 12px;
+   }
+   .bettercards img{
+     width: 60px;
+   }
+
+   .bettercards p{
+    font-size: 13px;
+  }
+  .join{
+    font-size: 18px;
+  }
 }
 
 
@@ -553,9 +593,7 @@
   .transformdiv div:first-child div {
     width: 70%;
   }
-  .getimg{
-    display: none;
-  }
+ 
 
 }
 
