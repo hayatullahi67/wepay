@@ -363,10 +363,10 @@ function Home (){
                 </div> 
 
                   {/* steps */}
-                  <div className='lg:mr-[100px]'>
-                  <div className=" lg:min-h-screen flex items-center justify-center p-6">
+                  <div className={`lg:mr-[0px]'`}>
+                  <div className="  flex items-center justify-center p-6">
       <div className="max-w-lg">
-        <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6`}>
+        <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[45px]  font-bold font-[inter] mb-[60px]`}>
           {isDarkMode ? <span> How to take open Wepay Account</span> : <span> Get started with WePay </span> }
           
           
@@ -379,11 +379,11 @@ function Home (){
             <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-green-500 text-green-500 font-semibold">
               1
             </div>
-            <div className="w-[2px] h-6 bg-green-400 "></div>
-            <div className="w-[2px] h-6 bg-gray-400 "></div>
+            <div className="w-[2px] h-[25px] bg-green-400 "></div>
+            <div className="w-[2px] h-[25px] bg-gray-400 "></div>
           </div>
-          <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6 text-lg font-semibold text-gray-900 max-sm:text-[16px]`}>Download the app</h3>
+          <div className="ml-[60px]">
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px] font-[inter]    mb-6   max-sm:text-[16px]`}>Download the app</h3>
           </div>
         </div>
 
@@ -393,10 +393,10 @@ function Home (){
             <div className={`${isDarkMode ? "text-white" : "text-[#003429]"} w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-500 text-gray-900 font-semibold`}>
               2
             </div>
-            <div className="w-[2px] h-12 bg-gray-400"></div>
+            <div className="w-[2px] h-[60px] bg-gray-400"></div>
           </div>
-          <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-1 text-lg font-semibold text-gray-900 text-lg font-semibold text-gray-900 max-sm:text-[16px]`}>Sign Up with Biometrics</h3>
+          <div className="ml-[60px]">
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px]  font-[inter]  mb-1 text-lg     max-sm:text-[16px]`}>Sign Up with Biometrics</h3>
             <p className="text-gray-500 text-sm ">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
           </div>
         </div>
@@ -408,8 +408,8 @@ function Home (){
               3
             </div>
           </div>
-          <div className="ml-4">
-            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-lg font-semibold text-gray-900 max-sm:text-[16px]`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
+          <div className="ml-[60px]">
+            <h3 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[30px] font-[inter] max-sm:text-[16px]`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
             <p className="text-gray-500 text-sm">
               {isDarkMode ? 'Start secure and smooth banking today.' : 'Start secure and seamless banking today'}
               </p>
@@ -425,7 +425,7 @@ function Home (){
            
 
            {/* Transform */}
-           <section className={`relative flex items-center justify-center min-h-screen ${
+           <section className={`relative flex items-center justify-center  ${
   isDarkMode ? "bg-[#00261E]" : "bg-gradient-to-b from-green-50 via-green-200 to-green-50"
 } ${classes.transformsec} pt-[80px] pb-[60px]`}>
            <div className='w-[100%]  flex justify-center'>
@@ -770,12 +770,17 @@ function Home (){
            </section>
 
            {/* Get in touch */}
-           <section className={`  ${classes.getintouch} mt-[80px]`}>
-           <div 
+           <section
            style={{ backgroundColor: isDarkMode ? "#042F1A" : "#DEFFF4" }}
-           className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
-      <div className="w-full max-w-3xl px-6 py-8 ">
-        <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
+           className={`  ${classes.getintouch} mb-[50px] mt-[80px]  ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
+           <div 
+           
+           className={` pt-[40px] pb-[40px] flex items-center justify-center `}>
+      <div className="w-[100%] px-6 py-8 ">
+        <div className='flex  justify-center'>
+            <div className='w-[55%]'>
+
+            <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
           {isDarkMode ? 'Make We Link Up!' : 'Get In Touch with Us'}
           
           </h1>
@@ -784,8 +789,13 @@ function Home (){
           {isDarkMode ? <span> You wan know more about how WePay fit help your business or personal money needs? Drop your details below, and we go arrange call-back from our team </span>  : <span>Want to learn more about how WePay can support your business or personal financial needs? Share your details
             below, and we&apos;ll arrange a call-back from our team.</span>}
         </p>
+            </div>
+        
+        </div>
+          
 
-        <form  className="space-y-6">
+           <div className=' flex  justify-center'>
+           <form  className="w-full max-w-[90%]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
@@ -867,6 +877,8 @@ function Home (){
            <b> Get in touch</b>
           </button>
         </form>
+           </div>
+       
       </div>
     </div>
            </section>

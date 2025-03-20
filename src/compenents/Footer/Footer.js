@@ -9,7 +9,7 @@ import classes from './Footer.module.css'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#002D24] text-white pt-[60px]">
+    <footer className=" bg-[#002D24] text-white pt-[60px]">
       <div className="flex justify-center  ">
         <div className='w-[90%]'>
 

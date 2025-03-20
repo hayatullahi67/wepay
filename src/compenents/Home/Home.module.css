@@ -401,15 +401,20 @@
 @media screen  and ( max-width: 480px){
   .getintouch{
     height: auto; /* Adjust height automatically */
-    min-height: 100px;
+    max-height: fit-content;
     display: flex;
     flex-wrap: wrap;
+    
+    
   }
   .transformsec{
     height: auto; /* Adjust height automatically */
     min-height: 200px;
     display: flex;
     flex-wrap: wrap;
+  }
+  .transformsec div:first-child {
+    /* flex: 1 1 calc(50% - 15px); */
   }
     .abouttxt{
        width: 380px;
