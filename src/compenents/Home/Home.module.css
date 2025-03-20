@@ -15,9 +15,7 @@
 .homecontainer.zoomed {
   transform: scale(1.5); /* Increases the size of the whole body by 50% */
 }
-.transformdiv {
-  border: 1px solid #0F7760;
-}
+
 
 /* Wrapper for the slider */
 .sliderWrapper {
@@ -542,6 +540,12 @@
   max-width: 195px !important;
   padding: 0px;
   /* justify-content:; */
+}
+.bettercardsinner2{
+  width: 160px;
+}
+.bettercardsinner2 p{
+  width: 140px;
 }
 }
 @media screen and (max-width:420px){

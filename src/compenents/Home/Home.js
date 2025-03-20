@@ -446,7 +446,7 @@ function Home (){
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
                       className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] pt-[70px]  w-[80%] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  lg:w-[80%] ${classes.transformgrid}`}>
                         {/* image */}
                         <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
                            <div className='max-sm:w-[30%]'>
@@ -472,7 +472,7 @@ function Home (){
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] pt-[70px]  w-[80%] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  lg:w-[80%] ${classes.transformgrid}`}>
                         {/* image */}
                         
 
@@ -501,7 +501,7 @@ function Home (){
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
                       className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] pt-[70px]  w-[80%] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  lg:w-[80%] ${classes.transformgrid}`}>
                         {/* image */}
                        
                        <div className='max-sm:max-w-[100%] max-sm:max-h-[50px] max-sm:flex max-sm:justify-center'>
@@ -530,7 +530,7 @@ function Home (){
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
                       className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
-                       <div className={`flex gap-[20px] pt-[70px]  w-[80%] ${classes.transformgrid}`}>
+                       <div className={`flex gap-[20px] pt-[70px]  lg:w-[80%] ${classes.transformgrid}`}>
                         {/* image */}
                        
 
@@ -573,7 +573,7 @@ function Home (){
                         <div className='text-center mt-[50px] mb-[30px]'><h1 className={`  ${classes.join}  ${isDarkMode ? "text-white" : "text-[#003429]"}  font-[inter] text-[30px] text-[#000000]`}><b>Join the WePay revolution today!</b></h1></div>
                         <Slider {...sliderSettings} data-aos="fade-down" className={`${classes.sliderWrapper} slider-custom  w-full max-w-[100vw]`}>
                       {/* bordercard */}
-                      <div className={` ${classes.bordercard} max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative   lg:max-w-[500px]`}>
+                      <div className={` ${classes.bordercard} max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative   lg:max-w-[530px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -616,12 +616,12 @@ function Home (){
 
           <h3 className="text-[20px] font-[inter] mb-[15px]  text-white "><b>Real Stories, Real Impact </b> </h3>
 
-<p className="font-[inter]  w-[350px] pb-[15px] text-[14px] text-[#dceeff]">
+<p className="font-[inter]   pb-[15px] text-[14px] text-[#dceeff]">
   {isDarkMode ? 'WePay biometric payment don change everything for us. Easy to set up, transactions dey sure, and their customer support dey top-notch. I recommend am well!' : "WePay’s biometric payment solution has been a game-changer for me. Easy setup, reliable transactions, and excellent customer support. Highly recommend!"}
   
 </p>
 
-<div className="flex w-[350px] items-center justify-between gap-3">
+<div className="flex  items-center justify-between gap-3">
   
   <div>
     <p className="text-sm font-medium text-emerald-50">Isaac Samuel</p>
@@ -638,7 +638,7 @@ function Home (){
       </div>
     </div>                        
                              {/*second border card  */}
-                             <div className={`${classes.bordercard}  max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative  lg:max-w-[500px]`}>
+                             <div className={`${classes.bordercard}  max-md:max-w-[440px]  max-sm:ml-[20px] sm:ml-[20px] slider-item relative  lg:max-w-[503px]`}>
       {/* Outer glow container */}
       <div className="absolute -inset-1 rounded-2xl " />
 
@@ -681,12 +681,12 @@ function Home (){
 
           <h3 className="text-[20px] font-[inter] mb-[15px]  text-white "><b>Real Stories, Real Impact </b> </h3>
 
-<p className="font-[inter] pb-[15px] w-[350px] text-[14px] text-[#dceeff]">
+<p className="font-[inter] pb-[15px] text-[14px] text-[#dceeff]">
  {isDarkMode ? 'The smooth sign-up and biometric security don make transactions easier and safer.' : ' The seamless onboarding and biometric security have made transactions easier and safer.'}
 
 </p>
 
-<div className=" mt-[30px] w-[350px] flex items-center justify-between gap-3">
+<div className=" mt-[30px]  flex items-center justify-between gap-3">
   
   <div>
     <p className="text-sm font-medium text-emerald-50">Idara Ekong</p>
