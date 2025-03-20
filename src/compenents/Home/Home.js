@@ -778,7 +778,7 @@ function Home (){
            className={` pt-[40px] pb-[40px] flex items-center justify-center `}>
       <div className="w-[100%] px-6 py-8 ">
         <div className='flex  justify-center'>
-            <div className='w-[55%]'>
+            <div className='md:w-[75%] lg:w-[55%]'>
 
             <h1 className={`text-[34px] font-bold font-[inter] text-[#000000] text-center mb-4 ${isDarkMode ? "text-white" : "text-[#000000]"}`}>
           {isDarkMode ? 'Make We Link Up!' : 'Get In Touch with Us'}
