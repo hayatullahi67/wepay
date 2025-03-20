@@ -7,7 +7,9 @@
 }
 
 
-
+.homecontainer.zoomed {
+  transform: scale(1.5); /* Increases the size of the whole body by 50% */
+}
 
 
 /* Wrapper for the slider */
@@ -376,7 +378,7 @@
   .bettercards{
     height: 380px;
   }
- 
+  
 }
 
 @media screen  and ( max-width: 492px){
@@ -397,6 +399,18 @@
 }
 
 @media screen  and ( max-width: 480px){
+  .getintouch{
+    height: auto; /* Adjust height automatically */
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .transformsec{
+    height: auto; /* Adjust height automatically */
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
     .abouttxt{
        width: 380px;
     }
@@ -564,7 +578,9 @@
     margin-left: 30px;
    }
      
-   
+   .transformsec{
+    height: fit-content !important;
+  } 
 }
 @media screen  and ( max-width: 365px){
   

@@ -353,8 +353,8 @@ function Home (){
 
 
          {/* Get started */}
-
-         <section className={`bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-green-900" : "bg-green"}`} >
+         
+         <section className={`${classes.getstartedsec} bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-green-900" : "bg-green"}`} >
           <div  className='flex justify-center'>
             <div  className='lg:w-[90%] max-sm:w-[70%] max-sm:w-[95%]  sm:w-[85%] md:w-[85%]  flex items-center md:gap-[135px] justify-between '>
               <div className={`${classes.getimg}`}>
@@ -363,7 +363,7 @@ function Home (){
                 </div> 
 
                   {/* steps */}
-                  <div>
+                  <div className='lg:mr-[100px]'>
                   <div className=" lg:min-h-screen flex items-center justify-center p-6">
       <div className="max-w-lg">
         <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-3xl  font-bold text-gray-900 mb-6`}>
@@ -444,7 +444,7 @@ function Home (){
                       {/* grids 1 */}
                       <div 
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
-                      className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      className={` ${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[570px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -470,7 +470,7 @@ function Home (){
                      {/* grids 2 */}
                      <div 
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
-                     className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                     className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"} flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[570px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -499,7 +499,7 @@ function Home (){
                       {/* grids 3 */}
                       <div 
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
-                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px]  bg-[white] ${classes.transformdiv}`}>
+                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[570px]  bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -528,7 +528,7 @@ function Home (){
 
                       <div 
                       style={isDarkMode ? { backgroundColor: "#042F1A", borderColor: "green" } : {}}
-                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[540px] bg-[white] ${classes.transformdiv}`}>
+                      className={`${isDarkMode ? "bg-[#042F1A] border border-[green]" : "bg-white"}  flex rounded-[16px] justify-center h-[209px] sm:w-[278px] md:w-[308px] lg:w-[570px] bg-[white] ${classes.transformdiv}`}>
                        {/* gridinner */}
                        <div className={`flex gap-[20px] pt-[70px]  w-[358px] ${classes.transformgrid}`}>
                         {/* image */}
@@ -770,7 +770,7 @@ function Home (){
            </section>
 
            {/* Get in touch */}
-           <section className='mt-[80px]'>
+           <section className={`  ${classes.getintouch} mt-[80px]`}>
            <div 
            style={{ backgroundColor: isDarkMode ? "#042F1A" : "#DEFFF4" }}
            className={`min-h-screen flex items-center justify-center ${isDarkMode ? "bg-[#042F1A] " : "bg-[#Defff4]"} bg-[#DEFFF4]`}>
