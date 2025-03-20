@@ -354,7 +354,7 @@ function Home (){
 
          {/* Get started */}
          
-         <section className={`${classes.getstartedsec} bg-[#DEFFF4]  mt-[65px] w-[100%] ${isDarkMode ? "bg-green-900" : "bg-green"}`} >
+         <section className={`${classes.getstartedsec} bg-[#DEFFF4] py-[40px]  mt-[65px] w-[100%] ${isDarkMode ? "bg-green-900" : "bg-green"}`} >
           <div  className='flex justify-center'>
             <div  className='lg:w-[90%] max-sm:w-[70%] max-sm:w-[95%]  sm:w-[85%] md:w-[85%]  flex items-center md:gap-[135px] justify-between '>
               <div className={`${classes.getimg}`}>
@@ -785,7 +785,7 @@ function Home (){
           
           </h1>
 
-        <p className={`${isDarkMode ? "text-white" : "text-[black]"} text-center mb-8 text-[black] text-[17px] font-[inter] text-opacity-70`}>
+        <p className={`${isDarkMode ? "text-white" : "text-[#000000] "} text-center mb-8  text-[18px] font-[inter] text-opacity-70`}>
           {isDarkMode ? <span> You wan know more about how WePay fit help your business or personal money needs? Drop your details below, and we go arrange call-back from our team </span>  : <span>Want to learn more about how WePay can support your business or personal financial needs? Share your details
             below, and we&apos;ll arrange a call-back from our team.</span>}
         </p>
@@ -798,7 +798,7 @@ function Home (){
            <form  className="w-full max-w-[90%]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="firstName" className="block text-[16px] font-[inter] text-gray-700">
                 Fast name<span className="text-red-500">*</span>
               </label>
               <input
@@ -812,7 +812,7 @@ function Home (){
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="lastName" className="block text-[16px] font-[inter]  text-gray-700">
                 Last name<span className="text-red-500">*</span>
               </label>
               <input
@@ -826,7 +826,7 @@ function Home (){
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-[16px] font-[inter] text-gray-700">
                 Email<span className="text-red-500">*</span>
               </label>
               <input
@@ -840,7 +840,7 @@ function Home (){
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="phoneNumber" className="block text-[16px] font-[inter]  text-gray-700">
                 Phone Number<span className="text-red-500">*</span>
               </label>
               <input
@@ -854,8 +854,8 @@ function Home (){
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
+          <div className="mt-[50px]">
+            <label className="block text-[18px] mb-[10px] font-medium font-[inter]">
               Consent<span className="text-red-500">*</span>
             </label>
             <div className="flex items-center space-x-2">
@@ -864,7 +864,7 @@ function Home (){
                 id="consent"                
                 className="h-4 w-4 text-green-500 focus:ring-green-500 border-[#055140] rounded"
               />
-              <label htmlFor="consent" className="text-sm font-medium text-gray-700">
+              <label htmlFor="consent" className="text-sm font-[inter]  text-gray-700">
                 I agree to receive Emails and Phone calls from WePay Team.
               </label>
             </div>
@@ -872,7 +872,7 @@ function Home (){
 
           <button
             type="submit"
-            className="bg-[#2FF86D]  text-black font-[inter] text-[12px] rounded-full px-8 py-2 transition-colors duration-200"
+            className="bg-[#2FF86D] mt-[20px]  text-black font-[inter] text-[18px] rounded-full px-8 py-2 transition-colors duration-200"
           >
            <b> Get in touch</b>
           </button>
