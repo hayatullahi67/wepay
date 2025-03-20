@@ -366,7 +366,7 @@ function Home (){
                   <div className={`lg:mr-[0px] `}>
                   <div className="  flex items-center justify-center p-6">
       <div className="max-w-lg">
-        <h2 className={`${isDarkMode ? "text-white" : "text-[#003429]"} text-[45px]  font-bold font-[inter] mb-[60px]`}>
+        <h2 className={`${classes.geth2} ${isDarkMode ? "text-white" : "text-[#003429]"} text-[45px]  font-bold font-[inter] mb-[60px]`}>
           {isDarkMode ? <span> How to take open Wepay Account</span> : <span> Get started with WePay </span> }
           
           
