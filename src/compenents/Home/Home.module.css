@@ -190,6 +190,15 @@
 .aboutfadeleft{
   margin-bottom: 60px;
 }
+
+.bettercards{
+  width: 250px;
+  height: 350px;
+}
+
+.bettercards:last-child{
+  height: 450px;
+}
 }
 
 @media screen  and ( max-width: 580px){
@@ -289,6 +298,13 @@
   .transformtext p{
          width: fit-content;
          font-size: 15px;
+  }
+  .bettercards{
+    height: 350px;
+  }
+
+  .bettercards:last-child{
+    height: 400px;
   }
  
 }
