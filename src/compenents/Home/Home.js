@@ -741,13 +741,13 @@ function Home (){
   <img src={isDarkMode ? pos2 : pos} className="z-10 left-[40px] relative  w-[2500px] h-[450px]" alt="Background" />
 
   {/* Outer Circle */}
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-sm:w-[260px] max-sm:h-[260px] w-[282px] h-[282px] border-2 border-[#44E693] rounded-full flex justify-center items-center">
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-sm:w-[210px] max-sm:h-[210px] w-[282px] h-[282px] border-2 border-[#44E693] rounded-full flex justify-center items-center">
     
     {/* Middle Circle */}
-    <div className="max-sm:w-[190px] max-sm:h-[190px] w-[212px] h-[212px] border-2 border-[#44E693] rounded-full flex justify-center items-center">
+    <div className="max-sm:w-[150px] max-sm:h-[150px] w-[212px] h-[212px] border-2 border-[#44E693] rounded-full flex justify-center items-center">
       
       {/* Inner Circle with Image */}
-      <div className=" w-[122px] h-[122px] border-2 border-[#44E693] rounded-full overflow-hidden">
+      <div className="max-sm:hidden w-[122px] h-[122px] border-2 border-[#44E693] rounded-full overflow-hidden">
       </div>
       
     </div>
