@@ -398,7 +398,7 @@ function Home (){
           </div>
           <div className={`ml-[60px] ${classes.stepdiv}`}>
             <h3 className={`${isDarkMode ? "text-white" : "text-[#043024]"} text-[30px]  font-[inter]  mb-1 text-lg     max-sm:text-[16px]`}>Sign Up with Biometrics</h3>
-            <p className="text-black opacity-70 text-[15px] ">Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
+            <p className={`${isDarkMode ? "text-white" : "text-black"} text-black opacity-70 text-[15px] `}>Your fingerprint {isDarkMode ? ' na' : 'is'}  your password</p>
           </div>
         </div>
 
@@ -411,7 +411,7 @@ function Home (){
           </div>
           <div className={`ml-[60px] ${classes.stepdiv}`}>
             <h3 className={`${isDarkMode ? "text-white" : "text-[#043024]"} text-[30px] font-[inter] max-sm:text-[16px]`}> {isDarkMode ? 'Put Money for Your Account' : 'Fund Your Account'}  </h3>
-            <p className="text-black opacity-70 text-[15px]">
+            <p className={`${isDarkMode ? "text-white" : "text-black"} text-black opacity-70 text-[15px] `}>
               {isDarkMode ? 'Start secure and smooth banking today.' : 'Start secure and seamless banking today'}
               </p>
           </div>
