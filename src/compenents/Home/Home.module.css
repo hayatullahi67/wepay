@@ -500,6 +500,9 @@
   .join{
     font-size: 18px;
   }
+  .bettercardsinner2 p{
+    width: 160px;
+  }
 }
 
 
@@ -545,7 +548,7 @@
   width: 160px;
 }
 .bettercardsinner2 p{
-  width: 140px;
+  width: 150px;
 }
 }
 @media screen and (max-width:420px){
@@ -670,7 +673,7 @@
 
 }
 
-@media screen  and ( max-width: 330px){
+@media screen  and ( max-width: 340px){
   
     .bordercard{
      width: 180px !important;

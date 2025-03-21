@@ -275,7 +275,7 @@ function Home (){
 
 {/* card 1 */}
 <div  className={` max-sm:w-[210px] md:w-[260px]  flex justify-center px-[0px] pt-[20px] pb-[1px]     ${classes.bettercards}`}>
- <div className={`  w-[200px]`}>
+ <div className={`max-sm:w-[160px]  w-[200px]`}>
 
     {/* card img */}
      <div className='flex justify-center pb-[30px]'> 
@@ -298,7 +298,7 @@ function Home (){
           </div>
            {/* card 2 */}
            <div  className={` max-sm:w-[210px] md:w-[260px] flex justify-center px-[0px] pt-[20px] pb-[1px]   ${classes.bettercards}`}>
-           <div className={`${classes.bettercardsinner2} w-[200px]`}>
+           <div className={`${classes.bettercardsinner2} max-sm:w-[170px] w-[200px]`}>
           
               {/* card img */}
                <div className='flex justify-center pb-[30px]'> 
@@ -311,7 +311,7 @@ function Home (){
           
                <div className={`${isDarkMode ? "text-[white] text-opacity-70" : "text-[#003429]"} max-sm:w-[195px] w-[235px] font-[inter] text-[#043024] max-sm:text-[14px] text-[17px] opacity-70 mb-[100px]`}>
                   <p>
-                    {isDarkMode ? <span>No card, no phone—touch and make payment anytime, anywhere.</span> : <span>No cards, no phones  access your money anytime, anywhere.</span>}
+                    {isDarkMode ? <span>No card, no phone—touch and make payment anytime, anywhere.</span> : <span>No cards, no phones—access your money anytime, anywhere.</span>}
                     
                   </p>
                </div>
@@ -321,7 +321,7 @@ function Home (){
           </div>
          {/* card3 */}
          <div  className={`max-sm:w-[260px] w-[300px] flex justify-center px-[0px] pt-[20px] pb-[1px]  ${classes.bettercards}`}>
-         <div className='w-[245px]'>
+         <div className=' max-sm:w-[215px] w-[245px]'>
         
             {/* card img */}
              <div className='flex justify-center pb-[30px]'> 
